@@ -93,7 +93,7 @@
             <div class="mt-5 ml-10 text-xl text-left font-bold text-cyan-500">
               Select Date & Time
             </div>
-            <div class="flex justify-evenly space-x-12 mt-5 px-5">
+            <div class="lg:flex justify-evenly mt-5 px-5">
               <div class="text-left">
                 <text class="font-bold text-amber-500 uppercase">Date</text>
                 <Datepicker
@@ -106,8 +106,8 @@
                   :enableTimePicker="false"
                 ></Datepicker>
               </div>
-              <div class="text-left">
-                <text class="font-bold text-amber-500 uppercase">Time</text>
+              <div class="text-left lg:mt-0 mt-10">
+                <text class="font-bold text-amber-500 uppercase mb-5 block">Time</text>
 
                 <Datepicker
                   v-model="time"
@@ -117,7 +117,7 @@
                   :maxTime="{ hours: 16, minutes: 50 }"
                 />
 
-                <div class="ml-4 mt-6 text-justify font-semibold">
+                <div class="lg:ml-4 mt-6 text-justify font-semibold">
                   <p class="text-red-500">
                     Note: There is no office during these holidays:
                   </p>
@@ -133,12 +133,12 @@
               </div>
             </div>
 
-            <div
+            <button
               @click="savedate"
-              class="absolute bottom-10 right-10 w-32 h-10 rounded-full bg-amber-500 hover:bg-amber-300 mt-3 text-center cursor-pointer text-xl text-white font-medium py-1 mr-2"
+              class="w-32 h-10 rounded-full bg-amber-500 hover:bg-amber-300 text-center cursor-pointer text-xl text-white font-medium py-1 lg:float-right lg:mr-44 mx-auto lg:my-0 my-16"
             >
               Request
-            </div>
+            </button>
 
             <div
               v-if="previewdate"
@@ -146,7 +146,7 @@
               style="background: rgba(0, 0, 0, 0.7)"
             >
               <div
-                class="border border-blue-500 shadow-lg modal-container bg-white w-4/12 md:max-w-11/12 mx-auto rounded-xl shadow-lg z-50 overflow-y-auto"
+                class="border border-blue-500 shadow-lg modal-container bg-white lg:w-4/12 w-11/12 mx-auto rounded-xl shadow-lg z-50 overflow-y-auto"
               >
                 <div class="modal-content py-4 text-left px-6">
 
@@ -216,15 +216,15 @@
                   >Application Information</label
                 >
               </div>
-              <div class="flex px-5">
-                <div class="w-full flex">
+             
+                <div class="w-full lg:flex px-5">
                   <label
-                    class="block mt-2 text-lg font-semibold text-gray-600 mx-3"
+                    class="whitespace-nowrap block mt-2 text-lg font-semibold text-gray-600 mx-3"
                     >Certificate Type:</label
                   >
                   <select
                     v-model="ctype"
-                    class="py-2 px-3 rounded-lg border-2 font-semibold border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    class="py-2 px-3 rounded-lg border-2 font-semibold border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent w-10/12"
                   >
                     <option value="BARANGAY CLEARANCE">
                       BARANGAY CLEARANCE
@@ -239,20 +239,20 @@
                   </select>
                   <div
                     @click="SelectCert"
-                    class="w-32 h-10 rounded-lg bg-amber-500 hover:bg-amber-300 text-center cursor-pointer text-xl text-white font-medium mx-3 mt-1 py-1"
+                    class="w-32 h-10 rounded-lg bg-amber-500 hover:bg-amber-300 text-center cursor-pointer text-xl text-white font-medium lg:mx-3 mx-auto lg:mt-1 mt-5 py-1"
                   >
                     Continue
                   </div>
                 </div>
-              </div>
+              
 
               <div v-if="BrgyClearance" class="mt-3 px-5 w-full h-3/4">
-                <div class="w-full h-1/5 bg-teal-100 rounded text-left">
-                  <p class="font-bold text-blue-700 pt-3 ml-5 text-lg">
+                <div class="lg:p-0 p-3 w-full lg:h-1/5 bg-teal-100 rounded text-left">
+                  <p class="font-bold text-blue-700 pt-3 lg:ml-5 text-lg">
                     BARANGAY CLEARANCE
                   </p>
-                  <p class="font-bold text-neutral-800 pt-1 ml-10 text-base">
-                    Issued identification documents neededd for many important
+                  <p class="font-bold text-neutral-800 pt-1 lg:ml-10 text-base">
+                    Issued identification documents needed for many important
                     business job or personal transactions.
                   </p>
                 </div>
@@ -262,10 +262,10 @@
                       Please provide all the information below
                     </p>
                   </div>
-                  <div class="flex mt-5 text-left">
-                    <div class="grid grid-cols-1 px-3 w-1/4">
+                  <div class="lg:flex lg:mt-10 text-left">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >First Name</label
                       >
                       <text
@@ -274,9 +274,9 @@
                         >{{ first }}</text
                       >
                     </div>
-                    <div class="grid grid-cols-1 px-3 w-1/4">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Midle Name</label
                       >
                       <text
@@ -285,9 +285,9 @@
                         >{{ middle }}</text
                       >
                     </div>
-                    <div class="grid grid-cols-1 px-3 w-1/4">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Last Name</label
                       >
                       <text
@@ -296,9 +296,9 @@
                         >{{ last }}</text
                       >
                     </div>
-                    <div class="grid grid-cols-1 px-3 w-1/4">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Suffix</label
                       >
                       <text
@@ -308,10 +308,10 @@
                       >
                     </div>
                   </div>
-                  <div class="flex mt-5 text-left">
-                    <div class="grid grid-cols-1 px-3 w-1/4">
+                  <div class="lg:flex mt-5 text-left">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Purok</label
                       >
 
@@ -321,9 +321,9 @@
                         >{{ purok }}</text
                       >
                     </div>
-                    <div class="grid grid-cols-1 px-3 w-1/4">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Citizenship</label
                       >
                       <input
@@ -333,9 +333,9 @@
                         placeholder="Citizenship"
                       />
                     </div>
-                    <div class="grid grid-cols-1 px-3 w-1/4">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Status</label
                       >
                       <select
@@ -349,9 +349,9 @@
                         <option value="Separated">Separated</option>
                       </select>
                     </div>
-                    <div class="grid grid-cols-1 px-3 w-1/4">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Age</label
                       >
                       <input
@@ -362,10 +362,10 @@
                       />
                     </div>
                   </div>
-                  <div class="flex mt-5 mb-5 text-left">
-                    <div class="grid grid-cols-1 px-3 w-1/4">
+                  <div class="lg:flex lg:mt-5 lg:mb-5 text-left">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Quantity</label
                       >
                       <select
@@ -376,9 +376,9 @@
                         <option value="2">2</option>
                       </select>
                     </div>
-                    <div class="grid grid-cols-1 px-3 w-1/4">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                       <label
-                        class="block mt-2 text-xs font-semibold text-gray-600 uppercase ml-2"
+                        class="block lg:mt-2 text-sm font-semibold text-gray-600 uppercase"
                         >Include Cedula</label
                       >
                       <select
@@ -389,9 +389,9 @@
                         <option value="No">No</option>
                       </select>
                     </div>
-                    <div class="grid grid-cols-1 px-3 w-1/2">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/2">
                       <label
-                        class="block mt-2 text-xs font-semibold text-gray-600 uppercase ml-2"
+                        class="block lg:mt-2 text-sm font-semibold text-gray-600 uppercase"
                         >Purpose</label
                       >
                       <input
@@ -402,8 +402,8 @@
                       />
                     </div>
                   </div>
-                  <div class="flex justify-evenly mb-3">
-                    <div class="flex">
+                  <div class="lg:flex justify-evenly lg:mb-3 my-10">
+                    <div class="flex mx-auto w-min">
                       <div
                         @click="ClearanceInfo"
                         class="w-32 h-10 rounded-full bg-amber-500 hover:bg-amber-300 mt-3 text-center cursor-pointer text-xl text-white font-medium py-1 mr-2"
@@ -439,7 +439,7 @@
                   <div class="flex mt-5 text-left">
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >First Name</label
                       >
                       <text
@@ -450,7 +450,7 @@
                     </div>
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Midle Name</label
                       >
                       <text
@@ -461,7 +461,7 @@
                     </div>
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Last Name</label
                       >
                       <text
@@ -472,7 +472,7 @@
                     </div>
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Suffix</label
                       >
                       <text
@@ -485,7 +485,7 @@
                   <div class="flex mt-5 text-left">
                     <div class="grid grid-cols-1 px-3 w-2/5">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Business Name</label
                       >
                       <input
@@ -497,7 +497,7 @@
                     </div>
                     <div class="grid grid-cols-1 px-3 w-1/5">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Venue</label
                       >
                       <select
@@ -511,7 +511,7 @@
                     </div>
                     <div class="grid grid-cols-1 px-3 w-2/5">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Business Nature</label
                       >
                       <input
@@ -525,7 +525,7 @@
                   <div class="flex mt-5 mb-5 text-left">
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Effectivity</label
                       >
                       <Datepicker
@@ -536,7 +536,7 @@
                     </div>
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Include Cedula</label
                       >
                       <select
@@ -547,9 +547,9 @@
                         <option value="No">No</option>
                       </select>
                     </div>
-                    <div class="grid grid-cols-1 px-3 w-1/2">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/2">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Purpose</label
                       >
                       <input
@@ -560,7 +560,7 @@
                       />
                     </div>
                   </div>
-                  <div class="flex justify-evenly mb-3">
+                  <div class="flex justify-evenly mb-3 mx-auto">
                     <div class="flex">
                       <div
                         @click="PermitInfo"
@@ -598,7 +598,7 @@
                   <div class="flex mt-5 text-left">
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >First Name</label
                       >
                       <text
@@ -609,7 +609,7 @@
                     </div>
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Midle Name</label
                       >
                       <text
@@ -620,7 +620,7 @@
                     </div>
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Last Name</label
                       >
                       <text
@@ -631,7 +631,7 @@
                     </div>
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Suffix</label
                       >
                       <text
@@ -644,7 +644,7 @@
                   <div class="flex mt-5 text-left">
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Purok</label
                       >
 
@@ -656,7 +656,7 @@
                     </div>
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Citizenship</label
                       >
                       <input
@@ -668,7 +668,7 @@
                     </div>
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Status</label
                       >
                       <select
@@ -684,7 +684,7 @@
                     </div>
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Age</label
                       >
                       <input
@@ -698,7 +698,7 @@
                   <div class="flex mt-5 mb-5 text-left">
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Quantity</label
                       >
                       <select
@@ -711,7 +711,7 @@
                     </div>
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="block mt-2 text-xs font-semibold text-gray-600 uppercase ml-2"
+                        class="block mt-2 text-sm font-semibold text-gray-600 uppercase ml-2"
                         >Include Cedula</label
                       >
                       <select
@@ -722,9 +722,9 @@
                         <option value="No">No</option>
                       </select>
                     </div>
-                    <div class="grid grid-cols-1 px-3 w-1/2">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/2">
                       <label
-                        class="block mt-2 text-xs font-semibold text-gray-600 uppercase ml-2"
+                        class="block mt-2 text-sm font-semibold text-gray-600 uppercase ml-2"
                         >Purpose</label
                       >
                       <input
@@ -771,7 +771,7 @@
                   <div class="flex mt-5 text-left">
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >First Name</label
                       >
                       <text
@@ -782,7 +782,7 @@
                     </div>
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Midle Name</label
                       >
                       <text
@@ -793,7 +793,7 @@
                     </div>
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Last Name</label
                       >
                       <text
@@ -804,7 +804,7 @@
                     </div>
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Suffix</label
                       >
                       <text
@@ -817,7 +817,7 @@
                   <div class="flex mt-5 text-left">
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Purok</label
                       >
 
@@ -829,7 +829,7 @@
                     </div>
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Citizenship</label
                       >
                       <input
@@ -841,7 +841,7 @@
                     </div>
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Status</label
                       >
                       <select
@@ -857,7 +857,7 @@
                     </div>
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Age</label
                       >
                       <input
@@ -871,7 +871,7 @@
                   <div class="flex mt-5 mb-5 text-left">
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                        class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Quantity</label
                       >
                       <select
@@ -884,7 +884,7 @@
                     </div>
                     <div class="grid grid-cols-1 px-3 w-1/4">
                       <label
-                        class="block mt-2 text-xs font-semibold text-gray-600 uppercase ml-2"
+                        class="block mt-2 text-sm font-semibold text-gray-600 uppercase ml-2"
                         >Include Cedula</label
                       >
                       <select
@@ -895,9 +895,9 @@
                         <option value="No">No</option>
                       </select>
                     </div>
-                    <div class="grid grid-cols-1 px-3 w-1/2">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/2">
                       <label
-                        class="block mt-2 text-xs font-semibold text-gray-600 uppercase ml-2"
+                        class="block mt-2 text-sm font-semibold text-gray-600 uppercase ml-2"
                         >Purpose</label
                       >
                       <input
@@ -1491,7 +1491,7 @@
 
 <script>
 import Nav from "../components/Nav.vue";
-//import Datepicker from "@vuepic/vue-datepicker";
+import Datepicker from "@vuepic/vue-datepicker";
 import "@vuepic/vue-datepicker/dist/main.css";
 import { ref } from "vue";
 import { app } from "../firebase";
@@ -1499,7 +1499,7 @@ import { app } from "../firebase";
 import { getFirestore, getDoc, setDoc, doc } from "firebase/firestore";
 export default {
   components: { 
-    //Datepicker, 
+    Datepicker, 
     Nav },
   setup() {
     const calendar = ref(new Date());
