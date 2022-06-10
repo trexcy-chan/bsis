@@ -12,17 +12,17 @@
         >
           <div
             v-if="currentClearance"
-            class="relative w-1/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
+            class="relative lg:w-1/3 w-2/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
           >
             <div class="absolute right-3 top-3">
               <text
                 @click="editc(creqstat)"
-                class="text-4xl material-icons text-amber-500 cursor-pointer mr-2 hover:text-amber-300"
+                class="lg:text-4xl text-3xl material-icons text-amber-500 cursor-pointer mr-2 hover:text-amber-300"
                 >edit</text
               >
               <text
                 @click="Cdelete(creqstat)"
-                class="text-4xl material-icons text-amber-500 cursor-pointer hover:text-amber-300"
+                class="lg:text-4xl text-3xl material-icons text-amber-500 cursor-pointer hover:text-amber-300"
                 >cancel</text
               >
             </div>
@@ -33,7 +33,7 @@
             </div>
             <hr class="mb-1 border-t border-teal-400 w-3/4" />
             <div class="flex">
-              <p class="font-semibold text-justify text- mt-4 text-cyan-600">
+              <p class="font-semibold text-justify text-md mt-4 text-cyan-600">
                 Name:
               </p>
               <text
@@ -73,7 +73,7 @@
                 Reason:
               </p>
               <text
-                class="ml-3 font-semibold text-justify text-md mt-4 text-gray-800"
+                class="ml-3 font-semibold text-justify lg:text-md mt-4 text-gray-800"
                 >{{ creason }}</text
               >
             </div>
@@ -287,17 +287,17 @@
         >
           <div
             v-if="currentIndigency"
-            class="relative w-1/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
+            class="relative lg:w-1/3 w-2/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
           >
             <div class="absolute right-3 top-3">
               <text
                 @click="editi(ireqstat)"
-                class="text-4xl material-icons text-amber-500 cursor-pointer mr-2 hover:text-amber-300"
+                class="lg:text-4xl text-3xl material-icons text-amber-500 cursor-pointer mr-2 hover:text-amber-300"
                 >edit</text
               >
               <text
                 @click="Idelete(ireqstat)"
-                class="text-4xl material-icons text-amber-500 cursor-pointer hover:text-amber-300"
+                class="lg:text-4xl text-3xl material-icons text-amber-500 cursor-pointer hover:text-amber-300"
                 >cancel</text
               >
             </div>
@@ -355,7 +355,7 @@
           </div>
           <div
             v-if="editIndigency"
-            class="relative w-2/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
+            class="relative lg:w-1/3 w-2/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
           >
             <h1 class="text-xl font-semibold text-left">
               Certificate of Indigency
@@ -563,17 +563,17 @@
         >
           <div
             v-if="currentResidency"
-            class="relative w-1/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
+            class="relative lg:w-1/3 w-2/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
           >
             <div class="absolute right-3 top-3">
               <text
                 @click="editr(ireqstat)"
-                class="text-4xl material-icons text-amber-500 cursor-pointer mr-2 hover:text-amber-300"
+                class="lg:text-4xl text-3xl material-icons text-amber-500 cursor-pointer mr-2 hover:text-amber-300"
                 >edit</text
               >
               <text
                 @click="Rdelete(ireqstat)"
-                class="text-4xl material-icons text-amber-500 cursor-pointer hover:text-amber-300"
+                class="lg:text-4xl text-3xl material-icons text-amber-500 cursor-pointer hover:text-amber-300"
                 >cancel</text
               >
             </div>
@@ -839,26 +839,26 @@
         >
           <div
             v-if="currentPermit"
-            class="relative w-1/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
+            class="relative lg:w-1/3 w-2/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
           >
             <div class="absolute right-3 top-3">
               <text
                 @click="editp(pstatus)"
-                class="text-4xl material-icons text-amber-500 cursor-pointer mr-2 hover:text-amber-300"
+                class="lg:text-4xl text-3xl material-icons text-amber-500 cursor-pointer mr-2 hover:text-amber-300"
                 >edit</text
               >
               <text
                 @click="Pdelete(pstatus)"
-                class="text-4xl material-icons text-amber-500 cursor-pointer hover:text-amber-300"
+                class="lg:text-4xl text-3xl material-icons text-amber-500 cursor-pointer hover:text-amber-300"
                 >cancel</text
               >
             </div>
             <div class="flex relative">
-              <h1 class="text-xl font-semibold text-left">Barangay Permit</h1>
+              <h1 class="lg:text-xl font-semibold text-left">Barangay Permit</h1>
             </div>
             <hr class="mb-1 border-t border-teal-400 w-3/4" />
             <div class="flex">
-              <p class="font-semibold text-justify text- mt-4 text-cyan-600">
+              <p class="font-semibold text-justify text-md mt-4 text-cyan-600">
                 Name:
               </p>
               <text
@@ -1813,45 +1813,7 @@ export default {
       this.loadrequests();
     },
 
-    gthome() {
-      const userID = this.userID;
-      this.$router.push(`/homepage/${userID}`);
-    },
-    gttrackcert() {
-      const userID = this.userID;
-      this.$router.push(`/trackcertpage/${userID}`);
-    },
-    gtreqcert() {
-      const userID = this.userID;
-      this.$router.push(`/requestcertpage/${userID}`);
-    },
-    logout() {
-      const first = this.first;
-      const middle = this.middle;
-      const last = this.last;
-      const suffix = this.suffix;
-      const purok = this.purok;
-      const phonenumber = this.phonenumber;
-      const password = this.password;
-      const logintoken = "No";
-
-      const db = getFirestore(app);
-      const userID = this.userID;
-      console.log("Creating Data");
-      setDoc(doc(db, "residents", userID), {
-        userID,
-        first,
-        middle,
-        last,
-        suffix,
-        purok,
-        phonenumber,
-        password,
-        logintoken,
-      });
-      this.$toast.success("Logged Out!", { position: "top" });
-      this.$router.push("/");
-    },
+    
   },
 };
 </script>

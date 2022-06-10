@@ -397,49 +397,11 @@ export default {
       this.viewing = true;
       this.editing = false;
     },
-    gteditprofile() {
-      const userID = this.userID;
-      this.$router.push(`/editprofile/${userID}`);
-    },
-    gtreqcert() {
-      const userID = this.userID;
-      this.$router.push(`/requestcertpage/${userID}`);
-    },
-    gttrackcert() {
-      const userID = this.userID;
-      this.$router.push(`/trackcertpage/${userID}`);
-    },
-    gthome() {
-      const userID = this.userID;
-      this.$router.push(`/homepage/${userID}`);
-    },
-    logout() {
-      const first = this.first;
-      const middle = this.middle;
-      const last = this.last;
-      const suffix = this.suffix;
-      const purok = this.purok;
-      const phonenumber = this.phonenumber;
-      const password = this.password;
-      const logintoken = "No";
 
-      const db = getFirestore(app);
-      const userID = this.userID;
-      console.log("Creating Data");
-      setDoc(doc(db, "residents", userID), {
-        userID,
-        first,
-        middle,
-        last,
-        suffix,
-        purok,
-        phonenumber,
-        password,
-        logintoken,
-      });
-      this.$toast.success("Logged Out!", { position: "top" });
-      this.$router.push("/");
-    },
+  
+  
+  
+  
     closeopenmodal() {
       this.currentpassword = "";
       this.newpassword = "";

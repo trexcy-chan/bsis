@@ -35,7 +35,7 @@
 <script>
 import { app } from "../firebase";
 import Nav from "../components/Nav.vue";
-import { getFirestore, getDoc, doc ,setDoc} from "firebase/firestore";
+import { getFirestore, getDoc, doc} from "firebase/firestore";
 export default{
   async mounted() {
       this.userID = this.$route.params.id;
@@ -67,38 +67,6 @@ export default{
   components:{
     Nav
   },
-  methods: {
-   gthome(){
-      const userID = this.userID;
-      this.$router.push(`/homepage/${userID}`);
-   },
-   gttrackcert(){
-      const userID = this.userID;
-      this.$router.push(`/trackcertpage/${userID}`);
-   },
-   gtreqcert(){
-      const userID = this.userID;
-      this.$router.push(`/requestcertpage/${userID}`);
-   },
-    logout(){
-      
-        const first = this.first; 
-        const middle = this.middle;
-        const last = this.last; 
-        const suffix = this.suffix; 
-        const purok = this.purok; 
-        const phonenumber = this.phonenumber;
-        const password = this.password;
-        const logintoken = 'No';
 
-        const db = getFirestore(app);
-        const userID = this.userID;
-        console.log("Creating Data");
-        setDoc(doc(db, "residents",userID ),{ userID, first, middle, last, suffix, purok, phonenumber,password,logintoken})
-        this.$toast.success("Logged Out!", {position: "top"});
-        this.$router.push('/');
- 
-    },
-  }
 }
 </script>
