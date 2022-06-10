@@ -2,7 +2,7 @@
    <div class="w-screen shadow-md lg:h-auto h-14">
           <div class="mx-auto lg:px-8">
             <header class="lg:flex items-center justify-between">
-              <div class="lg:order-2 order-1">
+              <div class="lg:order-2 order-1 ">
                 <button
                   class="
                     flex
