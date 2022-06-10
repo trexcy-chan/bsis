@@ -211,7 +211,7 @@
           </div>
           <div v-if="OptionAppInfo" class="w-full">
             <div class="h-screen">
-              <div class="mt-5 mb-4 text-left">
+              <div class="mt-5 mb-4 text-center">
                 <label class="font-bold text-amber-500 uppercase"
                   >Application Information</label
                 >
@@ -248,7 +248,7 @@
 
               <div v-if="BrgyClearance" class="mt-3 px-5 w-full h-3/4">
                 <div class="lg:p-0 p-3 w-full lg:h-1/5 bg-teal-100 rounded text-left">
-                  <p class="font-bold text-blue-700 pt-3 lg:ml-5 text-lg">
+                  <p class="pt-0 font-bold text-blue-700 pt-3 lg:ml-5 text-lg">
                     BARANGAY CLEARANCE
                   </p>
                   <p class="font-bold text-neutral-800 pt-1 lg:ml-10 text-base">
@@ -258,7 +258,7 @@
                 </div>
                 <div class="mt-5 w-full px-2 rounded border-2">
                   <div class="text-center">
-                    <p class="font-bold text-amber-500 pt-3 ml-5 text-lg">
+                    <p class="font-bold text-amber-500 pt-3 text-lg">
                       Please provide all the information below
                     </p>
                   </div>
@@ -421,23 +421,23 @@
                 </div>
               </div>
               <div v-if="BrgyPermit" class="mt-3 px-5 w-full h-3/4">
-                <div class="w-full h-1/5 bg-teal-100 rounded text-left">
-                  <p class="font-bold text-blue-700 pt-3 ml-5 text-lg">
+                <div class="lg:p-0 p-3 w-full lg:h-1/5 bg-teal-100 rounded text-left">
+                  <p class="pt-0 font-bold text-blue-700 pt-3 lg:ml-5 text-lg">
                     BARANGAY PERMIT
                   </p>
-                  <p class="font-bold text-neutral-800 pt-1 ml-10 text-base">
+                  <p class="font-bold text-neutral-800 pt-1 lg:ml-10 text-base">
                     This certifies that your business complies with the
                     requirements of the barangay where your business operates.
                   </p>
                 </div>
                 <div class="mt-5 w-full px-2 rounded border-2">
                   <div class="text-center">
-                    <p class="font-bold text-amber-500 pt-3 ml-5 text-lg">
+                    <p class="font-bold text-amber-500 pt-3 text-lg">
                       Please provide all the information below
                     </p>
                   </div>
-                  <div class="flex mt-5 text-left">
-                    <div class="grid grid-cols-1 px-3 w-1/4">
+                  <div class="lg:flex lg:mt-10 text-left">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                       <label
                         class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >First Name</label
@@ -448,7 +448,7 @@
                         >{{ first }}</text
                       >
                     </div>
-                    <div class="grid grid-cols-1 px-3 w-1/4">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                       <label
                         class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Midle Name</label
@@ -459,7 +459,7 @@
                         >{{ middle }}</text
                       >
                     </div>
-                    <div class="grid grid-cols-1 px-3 w-1/4">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                       <label
                         class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Last Name</label
@@ -470,7 +470,7 @@
                         >{{ last }}</text
                       >
                     </div>
-                    <div class="grid grid-cols-1 px-3 w-1/4">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                       <label
                         class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Suffix</label
@@ -482,8 +482,8 @@
                       >
                     </div>
                   </div>
-                  <div class="flex mt-5 text-left">
-                    <div class="grid grid-cols-1 px-3 w-2/5">
+                  <div class="lg:flex lg:mt-5 text-left">
+                    <div class="grid grid-cols-1 px-3 lg:w-2/5 lg:mb-0 mb-5">
                       <label
                         class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Business Name</label
@@ -495,7 +495,7 @@
                         placeholder="Name of Business"
                       />
                     </div>
-                    <div class="grid grid-cols-1 px-3 w-1/5">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/5 lg:mb-0 mb-5">
                       <label
                         class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Venue</label
@@ -509,7 +509,7 @@
                         <option value="purok3">purok3</option>
                       </select>
                     </div>
-                    <div class="grid grid-cols-1 px-3 w-2/5">
+                    <div class="grid grid-cols-1 px-3 lg:w-2/5 lg:mb-0  mb-5">
                       <label
                         class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Business Nature</label
@@ -522,8 +522,8 @@
                       />
                     </div>
                   </div>
-                  <div class="flex mt-5 mb-5 text-left">
-                    <div class="grid grid-cols-1 px-3 w-1/4">
+                  <div class="lg:flex lg:mt-5 lg:mb-5 text-left">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0  mb-5">
                       <label
                         class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Effectivity</label
@@ -534,7 +534,7 @@
                         :minDate="new Date().toISOString().substr(0, 10)"
                       />
                     </div>
-                    <div class="grid grid-cols-1 px-3 w-1/4">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0  mb-5">
                       <label
                         class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Include Cedula</label
@@ -547,7 +547,7 @@
                         <option value="No">No</option>
                       </select>
                     </div>
-                    <div class="grid grid-cols-1 px-3 lg:w-1/2">
+                    <div class="grid grid-cols-1 px-3 lg:w-1/2 lg:mb-0  mb-5">
                       <label
                         class="uppercase text-sm text-gray-500 text-light font-semibold"
                         >Purpose</label
