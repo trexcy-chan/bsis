@@ -2,7 +2,7 @@
   <div main="trackcertpage">
     <div class="bg-white flex flex-col font-sans">
       <div class="w-screen shadow-lg">
-        <Nav />
+        <Nav class="lg:fixed" />
       </div>
       <div class="bg-gray-200 mt-3 h-screen">
         <!-- CLEARANCE -->

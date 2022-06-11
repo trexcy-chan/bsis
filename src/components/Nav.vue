@@ -5,7 +5,7 @@
             <header 
              class="lg:flex justify-between">
               <div @click="toggleNav"
-              class="lg:order-2 order-1 ">
+              class="lg:order-2 order-1">
                 <button
                   class="
                     flex
@@ -13,9 +13,9 @@
                     flex-col
                     absolute
                     top-0
-                    -left-1
-                    p-4
-                    mt-2
+                    ml-1
+                    py-6
+                    block
                   "
                 >
                   <span class="w-5 h-px mb-1 bg-amber-500"></span>
@@ -26,38 +26,40 @@
                 :class="showMenu ? 'flex' : 'hidden'"
                 class="
                 flex-col
-                mt-8
+                mt-4
                 space-y-4
-                lg:flex lg:space-y-0 lg:flex-row lg:items-center lg:space-x-10 lg:mt-0">
+                lg:flex lg:space-y-0 lg:flex-row 
+                lg:space-x-10 lg:-mt-4 lg:bg-inherit bg-white w-full
+                ">
                 
                   <a
 
                     @click="$parent.gthome"
-                    class="text-gray-800 hover:text-teal-400"
+                    class="text-gray-800 hover:text-teal-400 text-left"
                     >Home</a
                   >
                   <a
                     @click="$parent.gttrackcert"
-                    class="text-gray-800 hover:text-teal-400"
+                    class="text-gray-800 hover:text-teal-400 text-left"
                     >Appointment</a
                   >
                   <a
                     @click="$parent.gtreqcert"
-                    class="text-gray-800 hover:text-teal-400"
+                    class="text-gray-800 hover:text-teal-400 text-left"
                     >Schedule an Appointment</a
                   >
                   <a
                     @click="$parent.logout"
                     class="
                       right-1
+                      left-5
                       bg-amber-500
                       hover:bg-teal-300
                       rounded-full
                       uppercase
                       text-white
-                      py-2
+                      py-0.5
                       px-6
-                      -mt-2
                     "
                     >Log out</a
                   >
@@ -66,17 +68,15 @@
 
               <h1
                 class="
-                  lg:order-1
-                  order-2
                   font-bold
                   text-center text-2xl text-amber-500
-                  mt-3
+                  mt-3 
+                  bg-white
+                  lg:bg-inherit
                 "
               >
                 BCI <span class="text-teal-500">SYSTEM</span>
               </h1>
-   
-          
             </header>
           </div>
         </div>

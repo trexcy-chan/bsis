@@ -23,7 +23,7 @@
               >{{ residentname }}</text
             >
 
-            <p class="text-3xl text-stone-400 uppercase mt-5 lg:block">
+            <p class="lg:text-3xl text-stone-400 uppercase mt-1 mb-1 lg:block">
               {{ purok }}
             </p>
             <p class="lg:text-3xl font-bold text-amber-400 block"
@@ -35,7 +35,7 @@
             <p class="lg:text-3xl font-bold text-teal-400 block"
               >LANAO DEL NORTE</p
             >
-            <p class="lg:text-2xl text-gray-500 lg:mb-5 block lg:whitespace-nowrap"
+            <p class="lg:text-xl text-gray-500 lg:mb-5 block lg:whitespace-nowrap"
               >We're here to serve you in a fast, safe, and easy way</p>
             <a
               @click="gtabout"
@@ -59,7 +59,7 @@
               >About Us</a
             >
             </div>
-            <div class="bg-image lg:w-2/3"></div>
+            <div class="bg-image lg:h-15 lg:w-2/3"></div>
           </div>
           <div class="block">
             <div class="lg:mt-20 my-10 text-center lg:text-5xl text-2xl lg:text-teal-300 lg:font-normal font-bold">

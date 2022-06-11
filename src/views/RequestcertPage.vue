@@ -1,7 +1,7 @@
 <template>
   <div main="requestcertpage">
     <div class="bg-white flex flex-col font-sans">
-      <Nav />
+      <Nav class="flex" />
       <div class="lg:flex">
         <div class="lg:w-1/4 mt-5 lg:px-10 text-left mx-auto block w-min">
           <label class="font-bold text-amber-500 uppercase"
