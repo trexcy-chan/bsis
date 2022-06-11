@@ -1,8 +1,11 @@
 <template>
-   <div class="w-screen shadow-md h-14 bg-white">
+   <div  
+   class="w-screen shadow-md h-14 bg-white">
           <div class="mx-auto lg:px-8 w-11/12">
-            <header class="lg:flex justify-between">
-              <div class="lg:order-2 order-1 ">
+            <header 
+             class="lg:flex justify-between">
+              <div @click="toggleNav"
+              class="lg:order-2 order-1 ">
                 <button
                   class="
                     flex
@@ -19,8 +22,16 @@
                   <span class="w-5 h-px mb-1 bg-amber-500"></span>
                   <span class="w-5 h-px mb-1 bg-amber-500"></span>
                 </button>
-                <nav class="hidden lg:flex gap-10 p-0 mt-4">
+                <nav 
+                :class="showMenu ? 'flex' : 'hidden'"
+                class="
+                flex-col
+                mt-8
+                space-y-4
+                lg:flex lg:space-y-0 lg:flex-row lg:items-center lg:space-x-10 lg:mt-0">
+                
                   <a
+
                     @click="$parent.gthome"
                     class="text-gray-800 hover:text-teal-400"
                     >Home</a
@@ -64,13 +75,21 @@
               >
                 BCI <span class="text-teal-500">SYSTEM</span>
               </h1>
+   
+          
             </header>
           </div>
         </div>
 </template>
 
 <script>
+import { ref } from 'vue';
 export default {
   name: 'NavBar',
+  setup() {
+    let showMenu = ref(false);
+    const toggleNav = () => (showMenu.value = !showMenu.value);
+    return { showMenu, toggleNav };
+  },  
 }
 </script>
