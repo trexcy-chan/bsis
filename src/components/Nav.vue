@@ -1,9 +1,20 @@
 <template>
    <div  
    class="w-screen shadow-md h-14 bg-white">
-          <div class="mx-auto lg:px-8 w-11/12">
+          <div class="mx-auto lg:px-8 w-full">
             <header 
              class="lg:flex justify-between">
+             <h1
+                class="
+                  font-bold
+                  text-center text-2xl text-amber-500
+                  mt-3 
+                  bg-white
+                  lg:bg-inherit
+                "
+              >
+                BCI <span class="text-teal-500">SYSTEM</span>
+              </h1>
               <div @click="toggleNav"
               class="lg:order-2 order-1">
                 <button
@@ -13,7 +24,7 @@
                     flex-col
                     absolute
                     top-0
-                    ml-1
+                    ml-3
                     py-6
                     block
                   "
@@ -26,10 +37,12 @@
                 :class="showMenu ? 'flex' : 'hidden'"
                 class="
                 flex-col
-                mt-4
+                mt-3
                 space-y-4
                 lg:flex lg:space-y-0 lg:flex-row 
                 lg:space-x-10 lg:-mt-4 lg:bg-inherit bg-white w-full
+                lg:shadow-none
+                shadow-md
                 ">
                 
                   <a
@@ -60,23 +73,15 @@
                       text-white
                       py-0.5
                       px-6
+                      lg:w-auto
+                      w-1/2
                     "
                     >Log out</a
                   >
                 </nav>
               </div>
 
-              <h1
-                class="
-                  font-bold
-                  text-center text-2xl text-amber-500
-                  mt-3 
-                  bg-white
-                  lg:bg-inherit
-                "
-              >
-                BCI <span class="text-teal-500">SYSTEM</span>
-              </h1>
+              
             </header>
           </div>
         </div>
