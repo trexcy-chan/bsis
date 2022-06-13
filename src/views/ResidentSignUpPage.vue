@@ -38,7 +38,7 @@
         </div>
         
         <div class="grid grid-cols-1 px-3 w-3/5 text-left">
-                    <label class="block mt-2 text-xs font-semibold text-gray-600 uppercase ml-2">Phone Number 
+                    <label class="block mt-2 text-xs font-semibold text-gray-600 uppercase ml-2 ">Phone Number 
                     <span class="text-red-500">*</span></label>
                 <div class="flex">
                     <input v-model="phonenumber" class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="number" placeholder="Phone Number" />

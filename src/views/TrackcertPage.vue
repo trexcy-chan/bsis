@@ -1,20 +1,27 @@
 <template>
   <div main="trackcertpage">
-    <div class="bg-white flex flex-col font-sans">
-      <div class="w-screen shadow-lg">
-        <Nav class="lg:fixed" />
-      </div>
-      <div class="bg-gray-200 mt-3 h-screen">
-        <!-- CLEARANCE -->
+    <div class="h-screen bg-white content mx-auto">
+    <div class="flex flex-col font-sans">
+      <Nav class="fixed" />
+
+      <div class="bg-gray-200 mt-3 py-10 lg:px-8 w-full">
+          
+       
         <div
           v-if="clearanceExist"
           class="flex justify-evenly mt-1 py-10 bg-gray-200"
         >
           <div
             v-if="currentClearance"
-            class="relative lg:w-1/3 w-2/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
+            class=" lg:w-1/3 w-2/3 px-5 py-5 rounded-lg border-2 bg-gray-100 border-gray-500"
           >
-            <div class="absolute right-3 top-3">
+
+            <div class="flex justify-between">
+                         
+              <h1 class="text-xl font-semibold text-left">
+                Barangay Clearance
+              </h1>
+               <div class="lg:right-3 top-3">
               <text
                 @click="editc(creqstat)"
                 class="lg:text-4xl text-3xl material-icons text-amber-500 cursor-pointer mr-2 hover:text-amber-300"
@@ -26,10 +33,6 @@
                 >cancel</text
               >
             </div>
-            <div class="flex relative">
-              <h1 class="text-xl font-semibold text-left">
-                Barangay Clearance
-              </h1>
             </div>
             <hr class="mb-1 border-t border-teal-400 w-3/4" />
             <div class="flex">
@@ -80,20 +83,22 @@
           </div>
           <div
             v-if="editClearance"
-            class="relative w-2/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
+            class="lg:w-2/3 w-80 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500 mx-3"
           >
+            <div class="flex justify-between">
             <h1 class="text-xl font-semibold text-left">Barangay Clearance</h1>
-            <div class="absolute right-3 top-3">
+            <div class="lg:right-3 top-3">
               <text
                 @click="canceleditc"
                 class="text-4xl material-icons text-amber-500 cursor-pointer hover:text-amber-300"
                 >cancel</text
               >
             </div>
-            <div class="flex mt-5 text-left">
-              <div class="grid grid-cols-1 px-3 w-1/4">
+             </div>
+            <div class="lg:flex mt-5 text-left">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >First Name</label
                 >
                 <input
@@ -103,9 +108,9 @@
                   placeholder="First Name"
                 />
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Midle Name</label
                 >
                 <input
@@ -115,9 +120,9 @@
                   placeholder="Middle Name"
                 />
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Last Name</label
                 >
                 <input
@@ -127,9 +132,9 @@
                   placeholder="Last Name"
                 />
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Suffix</label
                 >
                 <input
@@ -140,10 +145,10 @@
                 />
               </div>
             </div>
-            <div class="flex mt-5 text-left">
-              <div class="grid grid-cols-1 px-3 w-1/4">
+            <div class="lg:flex mt-5 text-left">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-sm text-gray-500 text-light font-semibold"
                   >Purok</label
                 >
                 <select
@@ -155,9 +160,9 @@
                   <option value="purok3">Purok 3</option>
                 </select>
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Citizenship</label
                 >
                 <input
@@ -167,9 +172,9 @@
                   placeholder="Citizenship"
                 />
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Status</label
                 >
                 <select
@@ -183,9 +188,9 @@
                   <option value="Separated">Separated</option>
                 </select>
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Age</label
                 >
                 <input
@@ -196,10 +201,10 @@
                 />
               </div>
             </div>
-            <div class="flex mt-5 text-left">
-              <div class="grid grid-cols-1 px-3 w-1/4">
+            <div class="lg:flex mt-5 text-left">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Quantity</label
                 >
                 <select
@@ -210,9 +215,9 @@
                   <option value="2">2</option>
                 </select>
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="block mt-2 text-xs font-semibold text-gray-600 uppercase ml-2"
+                  class="block mt-2 font-semibold text-gray-600 uppercase ml-2"
                   >Include Cedula</label
                 >
                 <select
@@ -223,9 +228,9 @@
                   <option value="No">No</option>
                 </select>
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/2">
+              <div class="grid grid-cols-1 px-3 lg:w-1/2 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Purpose</label
                 >
                 <input
@@ -246,12 +251,13 @@
                 </div>
               </div>
             </div>
+  
           </div>
           <div
             v-if="deleteclearance"
-            class="relative w-1/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
+            class=" lg:w-1/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500 mx-3"
           >
-            <div class="flex relative">
+            <div class="flex">
               <h1 class="text-xl font-semibold text-left">
                 Delete Barangay Clearance?
               </h1>
@@ -280,14 +286,14 @@
           </div>
         </div>
 
-        <!-- INDIGENCY -->
+     
         <div
           v-if="indigencyExist"
           class="flex justify-evenly mt-1 py-10 bg-gray-200"
         >
           <div
             v-if="currentIndigency"
-            class="relative lg:w-1/3 w-2/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
+            class=" lg:w-1/3 w-2/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
           >
             <div class="absolute right-3 top-3">
               <text
@@ -301,7 +307,7 @@
                 >cancel</text
               >
             </div>
-            <div class="flex relative">
+            <div class="flex">
               <h1 class="text-xl font-semibold text-left">
                 Certificate of Indigency
               </h1>
@@ -355,7 +361,7 @@
           </div>
           <div
             v-if="editIndigency"
-            class="relative lg:w-1/3 w-2/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
+            class=" lg:w-1/3 w-2/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
           >
             <h1 class="text-xl font-semibold text-left">
               Certificate of Indigency
@@ -526,9 +532,9 @@
           </div>
           <div
             v-if="deleteindigency"
-            class="relative w-1/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
+            class=" w-1/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
           >
-            <div class="flex relative">
+            <div class="flex">
               <h1 class="text-xl font-semibold text-left">
                 Delete Certificate of Indigency?
               </h1>
@@ -556,16 +562,20 @@
             </div>
           </div>
         </div>
-        <!-- RESIDENCY -->
         <div
           v-if="residencyExist"
           class="flex justify-evenly mt-1 py-10 bg-gray-200"
         >
           <div
             v-if="currentResidency"
-            class="relative lg:w-1/3 w-2/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
+            class="lg:w-1/3 w-2/3 px-5 py-5 rounded-lg border-2 bg-gray-100 border-gray-500"
           >
-            <div class="absolute right-3 top-3">
+            <div class="flex justify-between">
+              <h1 class="text-xl font-semibold text-left">
+                Certificate of Residency
+              </h1>
+            
+            <div class="lg:right-3 top-3">
               <text
                 @click="editr(ireqstat)"
                 class="lg:text-4xl text-3xl material-icons text-amber-500 cursor-pointer mr-2 hover:text-amber-300"
@@ -577,11 +587,8 @@
                 >cancel</text
               >
             </div>
-            <div class="flex relative">
-              <h1 class="text-xl font-semibold text-left">
-                Certificate of Residency
-              </h1>
             </div>
+          
             <hr class="mb-1 border-t border-teal-400 w-3/4" />
             <div class="flex">
               <p class="font-semibold text-justify text- mt-4 text-cyan-600">
@@ -802,9 +809,9 @@
           </div>
           <div
             v-if="deleteresidency"
-            class="relative w-1/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
+            class="w-1/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
           >
-            <div class="flex relative">
+            <div class="flex">
               <h1 class="text-xl font-semibold text-left">
                 Delete Certificate of Residency?
               </h1>
@@ -832,7 +839,7 @@
             </div>
           </div>
         </div>
-        <!-- PERMIT -->
+      
         <div
           v-if="permitExist"
           class="flex justify-evenly mt-1 py-10 bg-gray-200"
@@ -1102,10 +1109,11 @@
       </div>
     </div>
   </div>
+  </div>
 </template>
 
 <script>
-import Datepicker from "@vuepic/vue-datepicker";
+// import Datepicker from "@vuepic/vue-datepicker";
 import Nav from "../components/Nav.vue";
 import "@vuepic/vue-datepicker/dist/main.css";
 import { app } from "../firebase";
@@ -1125,7 +1133,9 @@ import {
 } from "firebase/firestore";
 
 export default {
-  components: { Datepicker, Nav },
+  components: { 
+    // Datepicker, 
+  Nav },
   setup() {
     const month = ref({
       month: new Date().getMonth(),

@@ -120,8 +120,8 @@
               >
               <hr class="border-b mb-2 border-teal-400" />
               <div>
-                <div class="flex w-full text-center">
-                  <div class="grid grid-cols-1 px-3 w-1/4 text-left">
+                <div class="lg:flex w-full text-center">
+                  <div class="grid grid-cols-1 px-3 lg:w-1/4 text-left">
                     <label
                       class="block mt-2 text-sm text-cyan-600 font-semibold"
                       >First Name:
@@ -131,7 +131,7 @@
                       class="font-semibold text-justify text-lg rounded-xl border-2 bg-white px-2 py-1 mt-1"
                     />
                   </div>
-                  <div class="grid grid-cols-1 px-3 w-1/4 text-left">
+                  <div class="grid grid-cols-1 px-3 lg:w-1/4 text-left">
                     <label
                       class="block mt-2 text-sm text-cyan-600 font-semibold"
                       >Middle Name:
@@ -141,7 +141,7 @@
                       class="font-semibold text-justify text-lg rounded-xl border-2 bg-white px-2 py-1 mt-1"
                     />
                   </div>
-                  <div class="grid grid-cols-1 px-3 w-1/4 text-left">
+                  <div class="grid grid-cols-1 px-3 lg:w-1/4 text-left">
                     <label
                       class="block mt-2 text-sm text-cyan-600 font-semibold"
                       >Last Name:
@@ -152,8 +152,8 @@
                     />
                   </div>
                 </div>
-                <div class="flex w-full mt-3">
-                  <div class="grid grid-cols-1 px-3 w-1/4 text-left">
+                <div class="lg:flex w-full mt-3">
+                  <div class="grid grid-cols-1 px-3 lg:w-1/4 text-left">
                     <label
                       class="block mt-2 text-sm text-cyan-600 font-semibold"
                       >Suffix:
@@ -163,7 +163,7 @@
                       class="font-semibold text-justify text-lg rounded-xl border-2 bg-white px-2 py-1 mt-1"
                     />
                   </div>
-                  <div class="grid grid-cols-1 px-3 w-1/4 text-left">
+                  <div class="grid grid-cols-1 px-3 lg:w-1/4 text-left">
                     <label
                       class="block mt-2 text-sm text-cyan-600 font-semibold"
                       >Purok:
@@ -177,11 +177,11 @@
                       <option value="purok3">purok 3</option>
                     </select>
                   </div>
-                  <div class="flex absolute right-3 bottom-4">
+                  <div class="lg:flex right-8 bottom-4 block mt-10 lg:w-72">
                     <div
-                      class="bg-cyan-400 rounded-full border-2 border-cyan-400 text-white hover:text-cyan-500 hover:bg-cyan-100"
+                      class="lg:ml-8 lg:mb-0 mb-5 bg-cyan-400 rounded-full border-2 border-cyan-400 text-white hover:text-cyan-500 hover:bg-cyan-100"
                     >
-                      <text @click="save" class="text-xl cursor-pointer mx-3"
+                      <text @click="save" class="text-xl cursor-pointer mx-3 block"
                         >Save
                         <text class="text-xl material-icons cursor-pointer"
                           >save</text
@@ -189,7 +189,7 @@
                       </text>
                     </div>
                     <div
-                      class="ml-2 bg-cyan-400 rounded-full border-2 border-cyan-400 text-white hover:text-cyan-500 hover:bg-cyan-100"
+                      class="ml-2 block bg-cyan-400 rounded-full border-2 border-cyan-400 text-white hover:text-cyan-500 hover:bg-cyan-100"
                     >
                       <text @click="cancel" class="text-xl cursor-pointer mx-3"
                         >Cancel
@@ -397,11 +397,46 @@ export default {
       this.viewing = true;
       this.editing = false;
     },
+     gtreqcert() {
+      const userID = this.userID;
+      this.$router.push(`/requestcertpage/${userID}`);
+    },
+    gttrackcert() {
+      const userID = this.userID;
+      this.$router.push(`/trackcertpage/${userID}`);
+    },
+    gthome() {
+      const userID = this.userID;
+      this.$router.push(`/homepage/${userID}`);
+    },
 
-  
-  
-  
-  
+    logout() {
+      const first = this.first;
+      const middle = this.middle;
+      const last = this.last;
+      const suffix = this.suffix;
+      const purok = this.purok;
+      const phonenumber = this.phonenumber;
+      const password = this.password;
+      const logintoken = "No";
+
+      const db = getFirestore(app);
+      const userID = this.userID;
+      console.log("Creating Data");
+      setDoc(doc(db, "residents", userID), {
+        userID,
+        first,
+        middle,
+        last,
+        suffix,
+        purok,
+        phonenumber,
+        password,
+        logintoken,
+      });
+      this.$toast.success("Logged Out!", { position: "top" });
+      this.$router.push("/");
+    },
     closeopenmodal() {
       this.currentpassword = "";
       this.newpassword = "";

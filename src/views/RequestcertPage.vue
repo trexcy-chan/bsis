@@ -1,8 +1,8 @@
 <template>
   <div main="requestcertpage">
     <div class="bg-white flex flex-col font-sans">
-      <Nav class="fixed" />
       <div class="lg:flex">
+          <Nav class="fixed"/>
         <div class="lg:w-1/4 mt-5 lg:px-10 text-left mx-auto block w-min">
           <label class="font-bold text-amber-500 uppercase"
             >Request Certificate</label
@@ -214,9 +214,9 @@
                 >
               </div>
              
-                <div class="w-full lg:flex px-5">
+                <div class="lg:w-3/4 lg:flex px-5 lg:mt-10">
                   <label
-                    class="whitespace-nowrap block mt-2 text-lg font-semibold text-gray-600 mx-3"
+                    class="whitespace-nowrap block  text-lg font-semibold text-gray-600 mx-3"
                     >Certificate Type:</label
                   >
                   <select
@@ -266,7 +266,7 @@
                         >First Name</label
                       >
                       <text
-                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent uppercase"
                         type="text"
                         >{{ first }}</text
                       >
