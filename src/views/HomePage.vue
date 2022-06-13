@@ -226,7 +226,7 @@ export default {
       const userID = this.userID;
       this.$router.push(`/editprofile/${userID}`);
     },
-        gtabout() {
+    gtabout() {
       const userID = this.userID;
       this.$router.push(`/about/${userID}`);
     },

@@ -52,7 +52,7 @@
          <div class="lg:w-3/4 h-screen w-11/12 mx-auto">
           <div v-if="start" class="relative lg:w-3/4 mt-5">
             <form class="">
-              <h1 class="text-2xl font-semibold text-left">
+              <h1 class="text-2xl font-semibold text-left lg:mt-20">
                 Notes and Instructions:
               </h1>
               <h2 class="text-lg text-left text-red-400 mt-7 font-medium">
