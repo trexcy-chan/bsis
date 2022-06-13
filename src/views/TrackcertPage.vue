@@ -18,18 +18,17 @@
 
             <div class="flex justify-between">
                          
-              <h1 class="text-xl font-semibold text-left">
-                Barangay Clearance
+              <h1 class="lg:text-xl text-sm font-bold text-left"> Barangay Clearance
               </h1>
                <div class="lg:right-3 top-3">
               <text
                 @click="editc(creqstat)"
-                class="lg:text-4xl text-3xl material-icons text-amber-500 cursor-pointer mr-2 hover:text-amber-300"
+                class="lg:text-4xl lg:text-3xl material-icons text-amber-500 cursor-pointer mr-2 hover:text-amber-300"
                 >edit</text
               >
               <text
                 @click="Cdelete(creqstat)"
-                class="lg:text-4xl text-3xl material-icons text-amber-500 cursor-pointer hover:text-amber-300"
+                class="lg:text-4xl lg:text-3xl material-icons text-amber-500 cursor-pointer hover:text-amber-300"
                 >cancel</text
               >
             </div>
@@ -293,24 +292,24 @@
         >
           <div
             v-if="currentIndigency"
-            class=" lg:w-1/3 w-2/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
+            class="lg:w-1/3 w-2/3 px-5 py-5 rounded-lg border-2 bg-gray-100 border-gray-500"
           >
-            <div class="absolute right-3 top-3">
+            <div class="flex justify-between">
+              <h1 class="lg:text-xl text-sm font-bold text-left">
+                Certificate of Indigency
+              </h1>
+               <div class="lg:right-3 top-3">
               <text
                 @click="editi(ireqstat)"
-                class="lg:text-4xl text-3xl material-icons text-amber-500 cursor-pointer mr-2 hover:text-amber-300"
+                class="lg:text-4xl lg:text-3xl material-icons text-amber-500 cursor-pointer mr-2 hover:text-amber-300"
                 >edit</text
               >
               <text
                 @click="Idelete(ireqstat)"
-                class="lg:text-4xl text-3xl material-icons text-amber-500 cursor-pointer hover:text-amber-300"
+                class="lg:text-4xl lg:text-3xl material-icons text-amber-500 cursor-pointer hover:text-amber-300"
                 >cancel</text
               >
             </div>
-            <div class="flex">
-              <h1 class="text-xl font-semibold text-left">
-                Certificate of Indigency
-              </h1>
             </div>
             <hr class="mb-1 border-t border-teal-400 w-3/4" />
             <div class="flex">
@@ -363,20 +362,22 @@
             v-if="editIndigency"
             class=" lg:w-1/3 w-2/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
           >
+           <div class="flex justify-between">
             <h1 class="text-xl font-semibold text-left">
               Certificate of Indigency
             </h1>
-            <div class="absolute right-3 top-3">
+            <div class="lg:right-3 top-3">
               <text
                 @click="cancelediti"
                 class="text-4xl material-icons text-amber-500 cursor-pointer hover:text-amber-300"
                 >cancel</text
               >
             </div>
-            <div class="flex mt-5 text-left">
-              <div class="grid grid-cols-1 px-3 w-1/4">
+            </div>
+            <div class="lg:flex mt-5 text-left">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >First Name</label
                 >
                 <input
@@ -386,9 +387,9 @@
                   placeholder="First Name"
                 />
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Midle Name</label
                 >
                 <input
@@ -398,9 +399,9 @@
                   placeholder="Middle Name"
                 />
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Last Name</label
                 >
                 <input
@@ -410,9 +411,9 @@
                   placeholder="Last Name"
                 />
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Suffix</label
                 >
                 <input
@@ -423,10 +424,10 @@
                 />
               </div>
             </div>
-            <div class="flex mt-5 text-left">
-              <div class="grid grid-cols-1 px-3 w-1/4">
+            <div class="lg:flex mt-5 text-left">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Purok</label
                 >
                 <select
@@ -438,9 +439,9 @@
                   <option value="purok3">Purok 3</option>
                 </select>
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Citizenship</label
                 >
                 <input
@@ -450,9 +451,9 @@
                   placeholder="Citizenship"
                 />
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Status</label
                 >
                 <select
@@ -466,9 +467,9 @@
                   <option value="Separated">Separated</option>
                 </select>
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Age</label
                 >
                 <input
@@ -479,10 +480,10 @@
                 />
               </div>
             </div>
-            <div class="flex mt-5 text-left">
-              <div class="grid grid-cols-1 px-3 w-1/4">
+            <div class="lg:flex mt-5 text-left">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Quantity</label
                 >
                 <select
@@ -493,9 +494,9 @@
                   <option value="2">2</option>
                 </select>
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="block mt-2 text-xs font-semibold text-gray-600 uppercase ml-2"
+                  class="block mt-2 font-semibold text-gray-600 uppercase ml-2"
                   >Include Cedula</label
                 >
                 <select
@@ -506,9 +507,9 @@
                   <option value="No">No</option>
                 </select>
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/2">
+              <div class="grid grid-cols-1 px-3 lg:w-1/2 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Purpose</label
                 >
                 <input
@@ -532,7 +533,7 @@
           </div>
           <div
             v-if="deleteindigency"
-            class=" w-1/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
+            class="lg:w-1/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
           >
             <div class="flex">
               <h1 class="text-xl font-semibold text-left">
@@ -571,19 +572,19 @@
             class="lg:w-1/3 w-2/3 px-5 py-5 rounded-lg border-2 bg-gray-100 border-gray-500"
           >
             <div class="flex justify-between">
-              <h1 class="text-xl font-semibold text-left">
+              <h1 class="lg:text-xl text-sm font-bold text-left">
                 Certificate of Residency
               </h1>
             
             <div class="lg:right-3 top-3">
               <text
                 @click="editr(ireqstat)"
-                class="lg:text-4xl text-3xl material-icons text-amber-500 cursor-pointer mr-2 hover:text-amber-300"
+                class="lg:text-4xl lg:text-3xl material-icons text-amber-500 cursor-pointer mr-2 hover:text-amber-300"
                 >edit</text
               >
               <text
                 @click="Rdelete(ireqstat)"
-                class="lg:text-4xl text-3xl material-icons text-amber-500 cursor-pointer hover:text-amber-300"
+                class="lg:text-4xl lg:text-3xl material-icons text-amber-500 cursor-pointer hover:text-amber-300"
                 >cancel</text
               >
             </div>
@@ -638,22 +639,24 @@
           </div>
           <div
             v-if="editResidency"
-            class="relative w-2/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
+            class="lg:w-2/3 w-80 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500 mx-3"
           >
+          <div class="flex justify-between">
             <h1 class="text-xl font-semibold text-left">
               Certificate of Residency
             </h1>
-            <div class="absolute right-3 top-3">
+            <div class="lg:right-3 top-3">
               <text
                 @click="canceleditr"
                 class="text-4xl material-icons text-amber-500 cursor-pointer hover:text-amber-300"
                 >cancel</text
               >
+              </div>
             </div>
-            <div class="flex mt-5 text-left">
-              <div class="grid grid-cols-1 px-3 w-1/4">
+            <div class="lg:flex mt-5 text-left">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >First Name</label
                 >
                 <input
@@ -663,9 +666,9 @@
                   placeholder="First Name"
                 />
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Midle Name</label
                 >
                 <input
@@ -675,9 +678,9 @@
                   placeholder="Middle Name"
                 />
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Last Name</label
                 >
                 <input
@@ -687,9 +690,9 @@
                   placeholder="Last Name"
                 />
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Suffix</label
                 >
                 <input
@@ -700,10 +703,10 @@
                 />
               </div>
             </div>
-            <div class="flex mt-5 text-left">
-              <div class="grid grid-cols-1 px-3 w-1/4">
+            <div class="lg:flex mt-5 text-left">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Purok</label
                 >
                 <select
@@ -715,9 +718,9 @@
                   <option value="purok3">Purok 3</option>
                 </select>
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Citizenship</label
                 >
                 <input
@@ -727,9 +730,9 @@
                   placeholder="Citizenship"
                 />
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Status</label
                 >
                 <select
@@ -743,9 +746,9 @@
                   <option value="Separated">Separated</option>
                 </select>
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Age</label
                 >
                 <input
@@ -756,10 +759,10 @@
                 />
               </div>
             </div>
-            <div class="flex mt-5 text-left">
-              <div class="grid grid-cols-1 px-3 w-1/4">
+            <div class="lg:flex mt-5 text-left">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Quantity</label
                 >
                 <select
@@ -770,9 +773,9 @@
                   <option value="2">2</option>
                 </select>
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="block mt-2 text-xs font-semibold text-gray-600 uppercase ml-2"
+                  class="block mt-2 font-semibold text-gray-600 uppercase ml-2"
                   >Include Cedula</label
                 >
                 <select
@@ -783,9 +786,9 @@
                   <option value="No">No</option>
                 </select>
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/2">
+              <div class="grid grid-cols-1 px-3 lg:w-1/2 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Purpose</label
                 >
                 <input
@@ -809,7 +812,7 @@
           </div>
           <div
             v-if="deleteresidency"
-            class="w-1/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
+            class="lg:w-1/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
           >
             <div class="flex">
               <h1 class="text-xl font-semibold text-left">
@@ -846,22 +849,22 @@
         >
           <div
             v-if="currentPermit"
-            class="relative lg:w-1/3 w-2/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
+            class="lg:w-1/3 w-2/3 px-5 py-5 rounded-lg border-2 bg-gray-100 border-gray-500"
           >
-            <div class="absolute right-3 top-3">
+            <div class="flex justify-between">
+               <h1 class="lg:text-xl text-sm font-bold text-left">Barangay Permit</h1>
+               <div class="lg:right-3 top-3">
               <text
                 @click="editp(pstatus)"
-                class="lg:text-4xl text-3xl material-icons text-amber-500 cursor-pointer mr-2 hover:text-amber-300"
+                class="lg:text-4xl lg:text-3xl material-icons text-amber-500 cursor-pointer mr-2 hover:text-amber-300"
                 >edit</text
               >
               <text
                 @click="Pdelete(pstatus)"
-                class="lg:text-4xl text-3xl material-icons text-amber-500 cursor-pointer hover:text-amber-300"
+                class="lg:text-4xl lg:text-3xl material-icons text-amber-500 cursor-pointer hover:text-amber-300"
                 >cancel</text
               >
-            </div>
-            <div class="flex relative">
-              <h1 class="lg:text-xl font-semibold text-left">Barangay Permit</h1>
+              </div>
             </div>
             <hr class="mb-1 border-t border-teal-400 w-3/4" />
             <div class="flex">
@@ -912,21 +915,23 @@
           </div>
           <div
             v-if="editPermit"
-            class="relative w-2/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
+            class="lg:w-2/3 w-80 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500 mx-3"
           >
+           <div class="flex justify-between">
             <h1 class="text-xl font-semibold text-left">Barangay Permit</h1>
-            <div class="absolute right-3 top-3">
+            <div class="lg:right-3 top-3">
               <text
                 @click="canceleditp"
                 class="text-4xl material-icons text-amber-500 cursor-pointer hover:text-amber-300"
                 >cancel</text
               >
+              </div>
             </div>
 
-            <div class="flex mt-5 text-left">
-              <div class="grid grid-cols-1 px-3 w-1/4">
+            <div class="lg:flex mt-5 text-left">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >First Name</label
                 >
                 <input
@@ -936,9 +941,9 @@
                   placeholder="First Name"
                 />
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Midle Name</label
                 >
                 <input
@@ -948,9 +953,9 @@
                   placeholder="Middle Name"
                 />
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Last Name</label
                 >
                 <input
@@ -960,9 +965,9 @@
                   placeholder="Last Name"
                 />
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Suffix</label
                 >
                 <input
@@ -973,10 +978,10 @@
                 />
               </div>
             </div>
-            <div class="flex mt-5 text-left">
-              <div class="grid grid-cols-1 px-3 w-2/5">
+            <div class="lg:flex mt-5 text-left">
+              <div class="grid grid-cols-1 px-3 lg:w-2/5 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Business Name</label
                 >
                 <input
@@ -986,9 +991,9 @@
                   placeholder="Name of Business"
                 />
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/5">
+              <div class="grid grid-cols-1 px-3 lg:w-1/5 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Venue</label
                 >
                 <select
@@ -1000,9 +1005,9 @@
                   <option value="purok3">purok3</option>
                 </select>
               </div>
-              <div class="grid grid-cols-1 px-3 w-2/5">
+              <div class="grid grid-cols-1 px-3 lg:w-2/5 lg:mb-0  mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Business Nature</label
                 >
                 <input
@@ -1013,10 +1018,10 @@
                 />
               </div>
             </div>
-            <div class="flex mt-5 mb-5 text-left">
-              <div class="grid grid-cols-1 px-3 w-1/4">
+            <div class="lg:flex lg:mt-5 lg:mb-5 text-left">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Effectivity</label
                 >
                 <Datepicker
@@ -1025,9 +1030,9 @@
                   :minDate="new Date().toISOString().substr(0, 10)"
                 />
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/4">
+              <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Include Cedula</label
                 >
                 <select
@@ -1038,9 +1043,9 @@
                   <option value="No">No</option>
                 </select>
               </div>
-              <div class="grid grid-cols-1 px-3 w-1/2">
+              <div class="grid grid-cols-1 px-3 lg:w-1/2 lg:mb-0 mb-5">
                 <label
-                  class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold"
+                  class="uppercase text-gray-500 text-light font-semibold"
                   >Purpose</label
                 >
                 <input
@@ -1064,7 +1069,7 @@
           </div>
           <div
             v-if="deletepermit"
-            class="relative w-1/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
+            class="lg:w-1/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
           >
             <div class="flex relative">
               <h1 class="text-xl font-semibold text-left">
@@ -1113,7 +1118,7 @@
 </template>
 
 <script>
-// import Datepicker from "@vuepic/vue-datepicker";
+import Datepicker from "@vuepic/vue-datepicker";
 import Nav from "../components/Nav.vue";
 import "@vuepic/vue-datepicker/dist/main.css";
 import { app } from "../firebase";
@@ -1134,7 +1139,7 @@ import {
 
 export default {
   components: { 
-    // Datepicker, 
+  Datepicker, 
   Nav },
   setup() {
     const month = ref({

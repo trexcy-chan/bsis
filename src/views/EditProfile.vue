@@ -1,15 +1,16 @@
 <template>
   <main class="editprofile">
+    <div class="h-screen bg-white content mx-auto">
       <div class="bg-white flex flex-col font-sans">
         <div class="w-screen shadow-md">
-         <Nav/> 
+         <Nav class="fixed"/> 
         </div>
 
-        <div class="w-full lg:px-20 px-3">
+        <div class="mt-8 w-full lg:px-20 px-3">
           <div
             class="lg:px-10 px-3 py-5 w-full mt-10 rounded-lg border-2 border-gray-500"
           >
-            <form v-if="viewing" class="relative">
+            <form v-if="viewing">
               <label class="block mb-1 text-xl text-amber-500 font-semibold"
                 >Resident Information</label
               >
@@ -99,6 +100,7 @@
                         >Change Password
                       </text>
                     </div>
+                    
                     <div
                       class="lg:w-20 bg-cyan-400 rounded-full border-2 border-cyan-400 text-white hover:text-cyan-500 hover:bg-cyan-100 whitespace-nowrap"
                     >
@@ -114,7 +116,7 @@
                 <hr class="border-b mt-10 border-teal-400" />
               </div>
             </form>
-            <form v-if="editing" class="relative">
+            <form v-if="editing">
               <label class="block mb-1 text-xl text-amber-500 font-semibold"
                 >Update Resident Information</label
               >
@@ -179,7 +181,11 @@
                   </div>
                   <div class="lg:flex right-8 bottom-4 block mt-10 lg:w-72">
                     <div
-                      class="lg:ml-8 lg:mb-0 mb-5 bg-cyan-400 rounded-full border-2 border-cyan-400 text-white hover:text-cyan-500 hover:bg-cyan-100"
+                      class="lg:ml-8 lg:mb-0 
+                      ml-2
+                      mb-5 bg-cyan-400 rounded-full 
+                      border-2 border-cyan-400 text-white 
+                      hover:text-cyan-500 hover:bg-cyan-100"
                     >
                       <text @click="save" class="text-xl cursor-pointer mx-3 block"
                         >Save
@@ -287,6 +293,7 @@
           </div>
         </div>
       </div>
+      </div>  
   </main>
 </template>
 

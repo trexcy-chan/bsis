@@ -1,8 +1,8 @@
 <template>
    <div class="bg-white flex flex-col font-sans">
-  <Nav/>
+  <Nav class="fixed"/>
 
-    <div class="text-left ml-10 mr-10">
+    <div class="text-left ml-10 mr-10 mt-8">
       <h1 class="text-teal-500 text-4xl font-extrabold mt-12">ABOUT</h1>
       <p class="text-justify mt-4 ">Panaliwad-on is a barangay municipality of Salvador, in the province of Lanao del Norte. 
         <br>

@@ -55,6 +55,7 @@
                 block
                 w-min
                 whitespace-nowrap
+                
               "
               >About Us</a
             >
@@ -62,7 +63,7 @@
             <div class="bg-image lg:h-15 lg:w-2/3"></div>
           </div>
           <div class="block">
-            <div class="lg:mt-20 my-10 text-center lg:text-5xl text-2xl lg:text-teal-300 lg:font-normal font-bold">
+            <div class="animate-bounce lg:mt-20 my-10 text-center lg:text-5xl text-2xl lg:text-teal-300 lg:font-normal text-teal-400">
               How can we help you?
             </div>
           
@@ -96,6 +97,7 @@
                     uppercase
                     whitespace-nowrap
                     mt-5
+                    
                   "
                   >Request Certificate</label
                 >
