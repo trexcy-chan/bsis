@@ -2,7 +2,7 @@
   <main class="homepage">
     <div class="h-screen bg-white content mx-auto">
       <div class="flex flex-col font-sans">
-        <Nav class="fixed" />
+        <Nav class="fixed z-10" />
         <div class="mt-20 mx-auto lg:px-8 w-11/12">
           <div class="lg:flex gap-5">
             <div class="text-left lg:w-1/3">

@@ -3,30 +3,30 @@
     <div class="w-full p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12">
      <h1 class="text-xl font-semibold">Hello there 👋, <span class="font-normal">Please fill in your information to register</span></h1>
      <form class="">
-        <div class="flex w-full">
-            <div class="grid grid-cols-1 px-3 w-1/2 text-left">
+        <div class="lg:flex w-full">
+            <div class="grid grid-cols-1 px-3 lg:w-1/2 text-left">
                 <label class="block mt-2 text-xs font-semibold text-gray-600 uppercase ml-2">First Name 
                     <span class="text-red-500">*</span></label>
                 <input v-model="first" class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="First Name" />
             </div>
-            <div class="grid grid-cols-1 px-3 w-1/2 text-left">
+            <div class="grid grid-cols-1 px-3 lg:w-1/2 text-left">
                 <label class="block mt-2 text-xs font-semibold text-gray-600 uppercase ml-2">Middle Name 
                     <span class="text-red-500">*</span></label>
                 <input v-model="middle" class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Middle Name" />
             </div>
         </div>
-        <div class="flex w-full">
-            <div class="grid grid-cols-1 px-3 w-1/2 text-left">
+        <div class="lg:flex w-full">
+            <div class="grid grid-cols-1 px-3 lg:w-1/2 text-left">
                 <label class="block mt-2 text-xs font-semibold text-gray-600 uppercase ml-2">Last Name 
                     <span class="text-red-500">*</span></label>
                 <input v-model="last" class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Last Name" />
             </div>
-            <div class="grid grid-cols-1 px-3 w-1/2 text-left">
+            <div class="grid grid-cols-1 px-3 lg:w-1/2 text-left">
                 <label class="block mt-2 text-xs font-semibold text-gray-600 ml-2">SUFFIX (n/a if none)</label>
                 <input v-model="suffix" class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Suffix" />
             </div>
         </div>
-        <div class="grid grid-cols-1 px-3 w-1/2 text-left">
+        <div class="grid grid-cols-1 px-3 lg:w-1/2 text-left">
             <label class="block mt-2 text-xs font-semibold text-gray-600 uppercase ml-2">Purok 
                 <span class="text-red-500">*</span></label>
             <select v-model="purok"
@@ -37,22 +37,22 @@
             </select>
         </div>
         
-        <div class="grid grid-cols-1 px-3 w-3/5 text-left">
+        <div class="grid grid-cols-1 px-3 lg:w-3/5 text-left">
                     <label class="block mt-2 text-xs font-semibold text-gray-600 uppercase ml-2 ">Phone Number 
                     <span class="text-red-500">*</span></label>
                 <div class="flex">
-                    <input v-model="phonenumber" class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="number" placeholder="Phone Number" />
-                    <label @click="closeopen" class="ml-4 px-3 mt-2 mb-1 pt-1 rounded-lg bg-blue-500 hover:bg-blue-300 text-white text-center cursor-pointer " >Verify</label>
+                    <input v-model="phonenumber" class="lg:w-full w-2/3 py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="number" placeholder="Phone Number" />
+                    <label @click="closeopen" class="ml-8 lg:mt-1  text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" >Verify</label>
                 </div>
         </div>
         
-        <div class="grid grid-cols-1 px-3 w-3/5 text-left">
+        <div class="grid grid-cols-1 px-3 lg:w-3/5 text-left">
             <label class="block mt-2 text-xs font-semibold text-gray-600 uppercase ml-2">Password 
                 <span class="text-red-500">*</span></label>
             <input v-model="password" class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="password" placeholder="Password" />
         </div>
         
-        <div class="grid grid-cols-1 px-3 w-3/5 text-left">
+        <div class="grid grid-cols-1 px-3 lg:w-3/5 text-left">
             <label class="block mt-2 text-xs font-semibold text-gray-600 uppercase ml-2">Confirm Password 
                 <span class="text-red-500">*</span></label>
             <input v-model="password2" class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="password" placeholder="Confirm Password" />
@@ -66,7 +66,7 @@
     </div>
 </div>
 <div v-if="termscond" class="grid min-h-screen place-items-center">
-    <div class="w-full p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12">
+    <div class="w-full p-12 bg-white lg:w-5/12">
      <form @submit.prevent="agree">
      <h1 class="text-2xl font-semibold">Terms and Conditions</h1>
     <br>

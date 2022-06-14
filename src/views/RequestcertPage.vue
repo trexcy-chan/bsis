@@ -2,7 +2,7 @@
   <div main="requestcertpage">
     <div class="bg-white flex flex-col font-sans">
       <div class="lg:flex">
-          <Nav class="fixed"/>
+          <Nav class="fixed z-10"/>
         <div class="lg:w-1/4 mt-5 lg:px-10 text-left mx-auto block w-min">
           <label class="font-bold text-amber-500 uppercase"
             >Request Certificate</label
@@ -926,127 +926,127 @@
             </div>
           </div>
 
-          <div v-if="OptionRevAppInfo" class="px-10 mt-5">
+          <div v-if="OptionRevAppInfo" class="lg:px-10 mt-5">
             <div v-if="clearance">
-              <h1 class="text-xl font-semibold text-left text-amber-600">
+              <h1 class="text-xl font-semibold text-left text-amber-600 mt-5">
                 Review Application Information
               </h1>
               <form @submit.prevent="addclearance">
-                <div class="ml-10">
-                  <div class="flex mt-5">
-                    <p class="font-semibold text-justify text-cyan-600 text-lg">
+                <div class="lg:ml-10">
+                  <div class="flex mt-8">
+                    <p class="font-semibold text-justify text-cyan-600 lg:text-lg">
                       Type of Certificate:
                     </p>
-                    <p class="font-semibold text-justify text-lg ml-2">
+                    <p class="font-semibold text-justify lg:text-lg ml-2">
                       Barangay Clearance
                     </p>
                   </div>
                   <div class="flex mt-1">
-                    <p class="font-semibold text-justify text-lg text-cyan-600">
+                    <p class="font-semibold text-justify lg:text-lg text-cyan-600">
                       Date and Time:
                     </p>
-                    <text class="font-semibold text-justify text-lg ml-2">
+                    <text class="font-semibold text-justify lg:text-lg ml-2">
                       {{ selectedDate }}
                     </text>
-                    <p class="font-semibold text-justify text-lg mx-2">at</p>
-                    <text class="font-semibold text-justify text-lg ml-2">
+                    <p class="font-semibold text-justify lg:text-lg mx-2">at</p>
+                    <text class="font-semibold text-justify lg:text-lg ml-2">
                       {{ selectedTime }}
                     </text>
                   </div>
                   <div class="flex mt-1">
-                    <p class="font-semibold text-justify text-cyan-600 text-lg">
+                    <p class="font-semibold text-justify text-cyan-600 lg:text-lg">
                       First Name:
                     </p>
-                    <text class="font-semibold text-justify text-lg ml-2">
+                    <text class="font-semibold text-justify lg:text-lg ml-2">
                       {{ first }}
                     </text>
                   </div>
                   <div class="flex mt-1">
-                    <p class="font-semibold text-justify text-cyan-600 text-lg">
+                    <p class="font-semibold text-justify text-cyan-600 lg:text-lg">
                       Middle Name:
                     </p>
-                    <text class="font-semibold text-justify text-lg ml-2">
+                    <text class="font-semibold text-justify lg:text-lg ml-2">
                       {{ middle }}
                     </text>
                   </div>
                   <div class="flex mt-1">
-                    <p class="font-semibold text-justify text-cyan-600 text-lg">
+                    <p class="font-semibold text-justify text-cyan-600 lg:text-lg">
                       Last Name:
                     </p>
-                    <text class="font-semibold text-justify text-lg ml-2">
+                    <text class="font-semibold text-justify lg:text-lg ml-2">
                       {{ last }}
                     </text>
                   </div>
                   <div class="flex mt-1">
-                    <p class="font-semibold text-justify text-cyan-600 text-lg">
+                    <p class="font-semibold text-justify text-cyan-600 lg:text-lg">
                       Suffix :
                     </p>
-                    <text class="font-semibold text-justify text-lg ml-2">
+                    <text class="font-semibold text-justify lg:text-lg ml-2">
                       {{ suffix }}
                     </text>
                   </div>
                   <div class="flex mt-1">
-                    <p class="font-semibold text-justify text-cyan-600 text-lg">
+                    <p class="font-semibold text-justify text-cyan-600 lg:text-lg">
                       Purok :
                     </p>
-                    <text class="font-semibold text-justify text-lg ml-2">
+                    <text class="font-semibold text-justify lg:text-lg ml-2">
                       {{ purok }}
                     </text>
                   </div>
                   <div class="flex mt-1">
-                    <p class="font-semibold text-justify text-cyan-600 text-lg">
+                    <p class="font-semibold text-justify text-cyan-600 lg:text-lg">
                       Citizenship :
                     </p>
-                    <text class="font-semibold text-justify text-lg ml-2">
+                    <text class="font-semibold text-justify lg:text-lg ml-2">
                       {{ iccitizenship }}
                     </text>
                   </div>
                   <div class="flex mt-1">
-                    <p class="font-semibold text-justify text-cyan-600 text-lg">
+                    <p class="font-semibold text-justify text-cyan-600 lg:text-lg">
                       Status :
                     </p>
-                    <text class="font-semibold text-justify text-lg ml-2">
+                    <text class="font-semibold text-justify lg:text-lg ml-2">
                       {{ icstatus }}
                     </text>
                   </div>
                   <div class="flex mt-1">
-                    <p class="font-semibold text-justify text-cyan-600 text-lg">
+                    <p class="font-semibold text-justify text-cyan-600 lg:text-lg">
                       Age :
                     </p>
-                    <text class="font-semibold text-justify text-lg ml-2"
+                    <text class="font-semibold text-justify lg:text-lg ml-2"
                       >{{ icage }}
                     </text>
                   </div>
                   <div class="flex mt-1">
-                    <p class="font-semibold text-justify text-cyan-600 text-lg">
+                    <p class="font-semibold text-justify text-cyan-600 lg:text-lg">
                       Quantity :
                     </p>
-                    <text class="font-semibold text-justify text-lg ml-2">
+                    <text class="font-semibold text-justify lg:text-lg ml-2">
                       {{ icquantity }}</text
                     >
                   </div>
                   <div class="flex mt-1">
-                    <p class="font-semibold text-justify text-cyan-600 text-lg">
+                    <p class="font-semibold text-justify text-cyan-600 lg:text-lg">
                       Purpose :
                     </p>
-                    <text class="font-semibold text-justify text-lg ml-2">
+                    <text class="font-semibold text-justify lg:text-lg ml-2">
                       {{ icpurpose }}</text
                     >
                   </div>
                   <div class="flex mt-1">
-                    <p class="font-semibold text-justify text-cyan-600 text-lg">
+                    <p class="font-semibold text-justify text-cyan-600 lg:text-lg">
                       With Cedula :
                     </p>
-                    <text class="font-semibold text-justify text-lg ml-2">
+                    <text class="font-semibold text-justify lg:text-lg ml-2">
                       {{ icedula }}</text
                     >
                   </div>
                   <div class="flex mt-1">
-                    <p class="font-semibold text-justify text-cyan-600 text-lg">
+                    <p class="font-semibold text-justify text-cyan-600 lg:text-lg">
                       Total Cost :
                     </p>
                     <text
-                      class="font-bold text-red-500 text-justify text-lg ml-2"
+                      class="font-bold text-red-500 text-justify lg:text-lg ml-2"
                     >
                       {{ totalcost }}</text
                     >

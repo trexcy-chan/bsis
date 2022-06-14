@@ -34,48 +34,48 @@
             </div>
             </div>
             <hr class="mb-1 border-t border-teal-400 w-3/4" />
-            <div class="flex">
-              <p class="font-semibold text-justify text-md mt-4 text-cyan-600">
+            <div class="text-left flex">
+              <p class="font-semibold text-md mt-4 text-cyan-600">
                 Name:
               </p>
               <text
-                class="ml-3 font-semibold text-justify text-md mt-4 text-gray-800"
+                class="ml-3 font-semibold text-md mt-4 text-gray-800"
                 >{{ cname }}</text
               >
             </div>
-            <div class="flex">
-              <p class="font-semibold text-justify text-md mt-4 text-cyan-600">
+            <div class="text-left flex">
+              <p class="font-semibold text-md mt-4 text-cyan-600">
                 Appointment Date:
               </p>
               <text
-                class="ml-3 font-semibold text-justify text-md mt-4 text-gray-800"
+                class="ml-3 font-semibold text-md mt-4 text-gray-800"
                 >{{ cdate + " at " + ctime }}</text
               >
             </div>
-            <div class="flex">
-              <p class="font-semibold text-justify text-md mt-4 text-cyan-600">
+            <div class="text-left flex">
+              <p class="font-semibold text-md mt-4 text-cyan-600">
                 Total Cost:
               </p>
               <text
-                class="ml-3 font-semibold text-justify text-md mt-4 text-gray-800"
+                class="ml-3 font-semibold text-md mt-4 text-gray-800"
                 >{{ ctotalcost }}</text
               >
             </div>
-            <div class="flex">
-              <p class="font-semibold text-justify text-md mt-4 text-cyan-600">
+            <div class="text-left  flex">
+              <p class="font-semibold text-md mt-4 text-cyan-600">
                 Status:
               </p>
               <text
-                class="ml-3 font-semibold text-justify text-md mt-4 text-gray-800"
+                class="ml-3 font-semibold text-md mt-4 text-gray-800"
                 >{{ cstatus }}</text
               >
             </div>
-            <div v-if="cdissapproved" class="flex">
-              <p class="font-semibold text-justify text-md mt-4 text-cyan-600">
+            <div v-if="cdissapproved" class="text-left flex">
+              <p class="font-semibold text-md mt-4 text-cyan-600">
                 Reason:
               </p>
               <text
-                class="ml-3 font-semibold text-justify lg:text-md mt-4 text-gray-800"
+                class="ml-3 font-semibold lg:text-md mt-4 text-gray-800"
                 >{{ creason }}</text
               >
             </div>
@@ -296,7 +296,7 @@
           >
             <div class="flex justify-between">
               <h1 class="lg:text-xl text-sm font-bold text-left">
-                Certificate of Indigency
+                Barangay Indigency
               </h1>
                <div class="lg:right-3 top-3">
               <text
@@ -312,48 +312,48 @@
             </div>
             </div>
             <hr class="mb-1 border-t border-teal-400 w-3/4" />
-            <div class="flex">
-              <p class="font-semibold text-justify text- mt-4 text-cyan-600">
+            <div class="text-left flex">
+              <p class="font-semibold text- mt-4 text-cyan-600">
                 Name:
               </p>
               <text
-                class="ml-3 font-semibold text-justify text-md mt-4 text-gray-800"
+                class="ml-3 font-semibold text-md mt-4 text-gray-800"
                 >{{ iname }}</text
               >
             </div>
-            <div class="flex">
-              <p class="font-semibold text-justify text-md mt-4 text-cyan-600">
+            <div class="text-left flex">
+              <p class="font-semibold text-md mt-4 text-cyan-600">
                 Appointment Date:
               </p>
               <text
-                class="ml-3 font-semibold text-justify text-md mt-4 text-gray-800"
+                class="ml-3 font-semibold text-md mt-4 text-gray-800"
                 >{{ idate + " at " + itime }}</text
               >
             </div>
-            <div class="flex">
-              <p class="font-semibold text-justify text-md mt-4 text-cyan-600">
+            <div class="text-left flex">
+              <p class="font-semibold text-md mt-4 text-cyan-600">
                 Total Cost:
               </p>
               <text
-                class="ml-3 font-semibold text-justify text-md mt-4 text-gray-800"
+                class="ml-3 font-semibold text-md mt-4 text-gray-800"
                 >{{ itotalcost }}</text
               >
             </div>
-            <div class="flex">
-              <p class="font-semibold text-justify text-md mt-4 text-cyan-600">
+            <div class="text-left flex">
+              <p class="font-semibold text-md mt-4 text-cyan-600">
                 Status:
               </p>
               <text
-                class="ml-3 font-semibold text-justify text-md mt-4 text-gray-800"
+                class="ml-3 font-semibold text-md mt-4 text-gray-800"
                 >{{ istatus }}</text
               >
             </div>
-            <div v-if="idissapproved" class="flex">
-              <p class="font-semibold text-justify text-md mt-4 text-cyan-600">
+            <div v-if="idissapproved" class="text-left flex">
+              <p class="font-semibold text-md mt-4 text-cyan-600">
                 Reason:
               </p>
               <text
-                class="ml-3 font-semibold text-justify text-md mt-4 text-gray-800"
+                class="ml-3 font-semibold text-md mt-4 text-gray-800"
                 >{{ ireason }}</text
               >
             </div>
@@ -364,7 +364,7 @@
           >
            <div class="flex justify-between">
             <h1 class="text-xl font-semibold text-left">
-              Certificate of Indigency
+              Barangay Indigency
             </h1>
             <div class="lg:right-3 top-3">
               <text
@@ -573,7 +573,7 @@
           >
             <div class="flex justify-between">
               <h1 class="lg:text-xl text-sm font-bold text-left">
-                Certificate of Residency
+                Barangay Residency
               </h1>
             
             <div class="lg:right-3 top-3">
@@ -591,48 +591,48 @@
             </div>
           
             <hr class="mb-1 border-t border-teal-400 w-3/4" />
-            <div class="flex">
-              <p class="font-semibold text-justify text- mt-4 text-cyan-600">
+            <div class="text-left flex">
+              <p class="font-semibold text- mt-4 text-cyan-600">
                 Name:
               </p>
               <text
-                class="ml-3 font-semibold text-justify text-md mt-4 text-gray-800"
+                class="ml-3 font-semibold text-md mt-4 text-gray-800"
                 >{{ rname }}</text
               >
             </div>
-            <div class="flex">
-              <p class="font-semibold text-justify text-md mt-4 text-cyan-600">
+            <div class="text-left flex">
+              <p class="font-semibold text-md mt-4 text-cyan-600">
                 Appointment Date:
               </p>
               <text
-                class="ml-3 font-semibold text-justify text-md mt-4 text-gray-800"
+                class="ml-3 font-semibold text-md mt-4 text-gray-800"
                 >{{ rdate + " at " + rtime }}</text
               >
             </div>
-            <div class="flex">
-              <p class="font-semibold text-justify text-md mt-4 text-cyan-600">
+            <div class="text-left flex">
+              <p class="font-semibold text-md mt-4 text-cyan-600">
                 Total Cost:
               </p>
               <text
-                class="ml-3 font-semibold text-justify text-md mt-4 text-gray-800"
+                class="ml-3 font-semibold text-md mt-4 text-gray-800"
                 >{{ rtotalcost }}</text
               >
             </div>
-            <div class="flex">
-              <p class="font-semibold text-justify text-md mt-4 text-cyan-600">
+            <div class="text-left flex">
+              <p class="font-semibold text-md mt-4 text-cyan-600">
                 Status:
               </p>
               <text
-                class="ml-3 font-semibold text-justify text-md mt-4 text-gray-800"
+                class="ml-3 font-semibold text-md mt-4 text-gray-800"
                 >{{ rstatus }}</text
               >
             </div>
-            <div v-if="rdissapproved" class="flex">
-              <p class="font-semibold text-justify text-md mt-4 text-cyan-600">
+            <div v-if="rdissapproved" class="text-left flex">
+              <p class="font-semibold text-md mt-4 text-cyan-600">
                 Reason:
               </p>
               <text
-                class="ml-3 font-semibold text-justify text-md mt-4 text-gray-800"
+                class="ml-3 font-semibold text-md mt-4 text-gray-800"
                 >{{ rreason }}</text
               >
             </div>
@@ -643,7 +643,7 @@
           >
           <div class="flex justify-between">
             <h1 class="text-xl font-semibold text-left">
-              Certificate of Residency
+              Barangay Residency
             </h1>
             <div class="lg:right-3 top-3">
               <text
@@ -867,48 +867,48 @@
               </div>
             </div>
             <hr class="mb-1 border-t border-teal-400 w-3/4" />
-            <div class="flex">
-              <p class="font-semibold text-justify text-md mt-4 text-cyan-600">
+            <div class="text-left flex">
+              <p class="font-semibold text-md mt-4 text-cyan-600">
                 Name:
               </p>
               <text
-                class="ml-3 font-semibold text-justify text-md mt-4 text-gray-800"
+                class="ml-3 font-semibold text-md mt-4 text-gray-800"
                 >{{ pname }}</text
               >
             </div>
-            <div class="flex">
-              <p class="font-semibold text-justify text-md mt-4 text-cyan-600">
+            <div class="text-left flex">
+              <p class="font-semibold text-md mt-4 text-cyan-600">
                 Appointment Date:
               </p>
               <text
-                class="ml-3 font-semibold text-justify text-md mt-4 text-gray-800"
+                class="ml-3 font-semibold text-md mt-4 text-gray-800"
                 >{{ pdate + " at " + ptime }}</text
               >
             </div>
-            <div class="flex">
-              <p class="font-semibold text-justify text-md mt-4 text-cyan-600">
+            <div class="text-left flex">
+              <p class="font-semibold text-md mt-4 text-cyan-600">
                 Total Cost:
               </p>
               <text
-                class="ml-3 font-semibold text-justify text-md mt-4 text-gray-800"
+                class="ml-3 font-semibold text-md mt-4 text-gray-800"
                 >{{ ptotalcost }}</text
               >
             </div>
-            <div class="flex">
-              <p class="font-semibold text-justify text-md mt-4 text-cyan-600">
+            <div class="text-left flex">
+              <p class="font-semibold text-md mt-4 text-cyan-600">
                 Status:
               </p>
               <text
-                class="ml-3 font-semibold text-justify text-md mt-4 text-gray-800"
+                class="ml-3 font-semibold text-md mt-4 text-gray-800"
                 >{{ pstatus }}</text
               >
             </div>
-            <div v-if="pdissapproved" class="flex">
-              <p class="font-semibold text-justify text-md mt-4 text-cyan-600">
+            <div v-if="pdissapproved" class="text-left flex">
+              <p class="font-semibold text-md mt-4 text-cyan-600">
                 Reason:
               </p>
               <text
-                class="ml-3 font-semibold text-justify text-md mt-4 text-gray-800"
+                class="ml-3 font-semibold text-md mt-4 text-gray-800"
                 >{{ preason }}</text
               >
             </div>
@@ -1071,7 +1071,7 @@
             v-if="deletepermit"
             class="lg:w-1/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
           >
-            <div class="flex relative">
+            <div class="flex">
               <h1 class="text-xl font-semibold text-left">
                 Delete Barangay Permit?
               </h1>
