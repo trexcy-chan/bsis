@@ -130,7 +130,7 @@
                     </label>
                     <input
                       v-model="newfirst"
-                      class="font-semibold text-justify text-lg rounded-xl border-2 bg-white px-2 py-1 mt-1"
+                      class="font-semibold text-justify text-lg rounded-xl border-2 bg-white px-2 py-1 mt-1 capitalize"
                     />
                   </div>
                   <div class="grid grid-cols-1 px-3 lg:w-1/4 text-left">
@@ -140,7 +140,7 @@
                     </label>
                     <input
                       v-model="newmiddle"
-                      class="font-semibold text-justify text-lg rounded-xl border-2 bg-white px-2 py-1 mt-1"
+                      class="font-semibold text-justify text-lg rounded-xl border-2 bg-white px-2 py-1 mt-1 capitalize"
                     />
                   </div>
                   <div class="grid grid-cols-1 px-3 lg:w-1/4 text-left">
@@ -150,7 +150,7 @@
                     </label>
                     <input
                       v-model="newlast"
-                      class="font-semibold text-justify text-lg rounded-xl border-2 bg-white px-2 py-1 mt-1"
+                      class="font-semibold text-justify text-lg rounded-xl border-2 bg-white px-2 py-1 mt-1 capitalize"
                     />
                   </div>
                 </div>
@@ -162,7 +162,7 @@
                     </label>
                     <input
                       v-model="newsuffix"
-                      class="font-semibold text-justify text-lg rounded-xl border-2 bg-white px-2 py-1 mt-1"
+                      class="font-semibold text-justify text-lg rounded-xl border-2 bg-white px-2 py-1 mt-1 capitalize"
                     />
                   </div>
                   <div class="grid grid-cols-1 px-3 lg:w-1/4 text-left">
@@ -174,9 +174,9 @@
                       v-model="newpurok"
                       class="font-semibold text-justify text-lg rounded-xl border-2 bg-white px-2 py-1 mt-1"
                     >
-                      <option value="purok1">purok 1</option>
-                      <option value="purok2">purok 2</option>
-                      <option value="purok3">purok 3</option>
+                      <option value="Purok1">Purok 1</option>
+                      <option value="Purok2">Purok 2</option>
+                      <option value="Purok3">Purok 3</option>
                     </select>
                   </div>
                   <div class="lg:flex right-8 bottom-4 block mt-10 lg:w-72">
@@ -366,19 +366,19 @@ export default {
     },
     async save() {
       const phonenumber = this.phonenumber;
-      const first = this.newfirst;
-      const middle = this.newmiddle;
-      const last = this.newlast;
-      const suffix = this.newsuffix;
+      const first = this.capitalizeFirstLetter(this.newfirst);
+      const middle =this.capitalizeFirstLetter(this.newmiddle);
+      const last = this.capitalizeFirstLetter(this.newlast);
+      const suffix =this.capitalizeFirstLetter(this.newsuffix);
       const purok = this.newpurok;
       const password = this.password;
       const logintoken = "Yes";
 
-      this.first = this.newfirst;
-      this.middle = this.newmiddle;
-      this.last = this.newlast;
-      this.purok = this.newpurok;
-      this.suffix = this.newsuffix;
+      this.first =first;
+      this.middle = middle;
+      this.last = last;
+      this.purok = purok;
+      this.suffix = suffix;
 
       const db = getFirestore(app);
       const userID = this.userID;
@@ -472,6 +472,11 @@ export default {
         this.save();
       }
     },
+     capitalizeFirstLetter(str){
+    const capitalized = str.replace(/(^\w|\s\w)(\S*)/g, (_,m1,m2) => m1.toUpperCase()+m2.toLowerCase())
+    
+    return capitalized;
+    }
   },
 };
 </script>

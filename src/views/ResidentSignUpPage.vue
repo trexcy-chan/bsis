@@ -7,23 +7,23 @@
             <div class="grid grid-cols-1 px-3 lg:w-1/2 text-left">
                 <label class="block mt-2 text-xs font-semibold text-gray-600 uppercase ml-2">First Name 
                     <span class="text-red-500">*</span></label>
-                <input v-model="first" class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="First Name" />
+                <input v-model="first" class="capitalize py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="First Name" />
             </div>
             <div class="grid grid-cols-1 px-3 lg:w-1/2 text-left">
                 <label class="block mt-2 text-xs font-semibold text-gray-600 uppercase ml-2">Middle Name 
                     <span class="text-red-500">*</span></label>
-                <input v-model="middle" class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Middle Name" />
+                <input v-model="middle" class="capitalize py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Middle Name" />
             </div>
         </div>
         <div class="lg:flex w-full">
             <div class="grid grid-cols-1 px-3 lg:w-1/2 text-left">
                 <label class="block mt-2 text-xs font-semibold text-gray-600 uppercase ml-2">Last Name 
                     <span class="text-red-500">*</span></label>
-                <input v-model="last" class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Last Name" />
+                <input v-model="last" class="capitalize  py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Last Name" />
             </div>
             <div class="grid grid-cols-1 px-3 lg:w-1/2 text-left">
                 <label class="block mt-2 text-xs font-semibold text-gray-600 ml-2">SUFFIX (n/a if none)</label>
-                <input v-model="suffix" class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Suffix" />
+                <input v-model="suffix" class="capitalize py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Suffix" />
             </div>
         </div>
         <div class="grid grid-cols-1 px-3 lg:w-1/2 text-left">
@@ -31,9 +31,9 @@
                 <span class="text-red-500">*</span></label>
             <select v-model="purok"
              class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
-                <option value= "purok1">Purok 1</option>
-                <option value= "purok2">Purok 2</option>
-                <option value= "purok3">Purok 3</option>
+                <option value= "Purok1">Purok 1</option>
+                <option value= "Purok2">Purok 2</option>
+                <option value= "Purok3">Purok 3</option>
             </select>
         </div>
         
@@ -258,10 +258,10 @@ methods:{
             }
     },
     signup(){
-        const first = this.first; 
-        const middle = this.middle;
-        const last = this.last; 
-        const suffix = this.suffix; 
+        const first = this.capitalizeFirstLetter(this.first); 
+        const middle = this.capitalizeFirstLetter(this.middle);
+        const last = this.capitalizeFirstLetter(this.last); 
+        const suffix = this.capitalizeFirstLetter(this.suffix); 
         const purok = this.purok; 
         const phonenumber = this.phonenumber;
         const password=window.btoa(this.password);//encrypt
@@ -381,6 +381,11 @@ methods:{
         }
         }
 
+    },
+    capitalizeFirstLetter(str){
+    const capitalized = str.replace(/(^\w|\s\w)(\S*)/g, (_,m1,m2) => m1.toUpperCase()+m2.toLowerCase())
+    
+    return capitalized;
     }
 },
 }

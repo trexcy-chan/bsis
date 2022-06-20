@@ -102,7 +102,7 @@
                 >
                 <input
                   v-model="newcfirst"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="First Name"
                 />
@@ -114,7 +114,7 @@
                 >
                 <input
                   v-model="newcmiddle"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="Middle Name"
                 />
@@ -126,7 +126,7 @@
                 >
                 <input
                   v-model="newclast"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="Last Name"
                 />
@@ -138,7 +138,7 @@
                 >
                 <input
                   v-model="newcsuffix"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="Suffix"
                 />
@@ -154,9 +154,9 @@
                   v-model="newcpurok"
                   class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                 >
-                  <option value="purok1">Purok 1</option>
-                  <option value="purok2">Purok 2</option>
-                  <option value="purok3">Purok 3</option>
+                  <option value="Purok1">Purok 1</option>
+                  <option value="Purok2">Purok 2</option>
+                  <option value="Purok3">Purok 3</option>
                 </select>
               </div>
               <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
@@ -166,7 +166,7 @@
                 >
                 <input
                   v-model="newccitizenship"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="Citizenship"
                 />
@@ -195,7 +195,7 @@
                 <input
                   v-model="newcage"
                   class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                  type="text"
+                  type="number"
                   placeholder="Age"
                 />
               </div>
@@ -234,7 +234,7 @@
                 >
                 <input
                   v-model="newcpurpose"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="Purpose"
                 />
@@ -434,9 +434,9 @@
                   v-model="newipurok"
                   class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                 >
-                  <option value="purok1">Purok 1</option>
-                  <option value="purok2">Purok 2</option>
-                  <option value="purok3">Purok 3</option>
+                  <option value="Purok1">Purok 1</option>
+                  <option value="Purok2">Purok 2</option>
+                  <option value="Purok3">Purok 3</option>
                 </select>
               </div>
               <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
@@ -713,9 +713,9 @@
                   v-model="newrpurok"
                   class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                 >
-                  <option value="purok1">Purok 1</option>
-                  <option value="purok2">Purok 2</option>
-                  <option value="purok3">Purok 3</option>
+                  <option value="Purok1">Purok 1</option>
+                  <option value="Purok2">Purok 2</option>
+                  <option value="Purok3">Purok 3</option>
                 </select>
               </div>
               <div class="grid grid-cols-1 px-3 lg:w-1/4 lg:mb-0 mb-5">
@@ -1000,9 +1000,9 @@
                   v-model="newpvenue"
                   class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                 >
-                  <option value="purok1">purok1</option>
-                  <option value="purok2">purok2</option>
-                  <option value="purok3">purok3</option>
+                  <option value="Purok1">Purok 1</option>
+                  <option value="Purok2">Purok 2</option>
+                  <option value="Purok3">Purok 3</option>
                 </select>
               </div>
               <div class="grid grid-cols-1 px-3 lg:w-2/5 lg:mb-0  mb-5">
@@ -1438,17 +1438,17 @@ export default {
       const BRtotalcost = cost + 70 * this.newiquantity;
       const BRdate = this.rdate;
       const BRtime = this.rtime;
-      const BRfirst = this.newrfirst;
-      const BRmiddle = this.newrmiddle;
-      const BRlast = this.newrlast;
-      const BRsuffix = this.newrsuffix;
+      const BRfirst = this.capitalizeFirstLetter(this.newrfirst);
+      const BRmiddle = this.capitalizeFirstLetter(this.newrmiddle);
+      const BRlast = this.capitalizeFirstLetter(this.newrlast);
+      const BRsuffix = this.capitalizeFirstLetter(this.newrsuffix);
       const BRpurok = this.newrpurok;
-      const BRcitizenship = this.newrcitizenship;
+      const BRcitizenship = this.capitalizeFirstLetter(this.newrcitizenship);
       const BRstatus = this.newrstatus;
       const BRage = this.newrage;
       const BRquantity = this.newrquantity;
       const BRcedula = this.newrcedula;
-      const BRpurpose = this.newrpurpose;
+      const BRpurpose = this.capitalizeFirstLetter(this.newrpurpose);
       const BRreqstat = "Pending";
 
       const m = this.m;
@@ -1576,17 +1576,17 @@ export default {
       const BItotalcost = cost + 70 * this.newiquantity;
       const BIdate = this.idate;
       const BItime = this.itime;
-      const BIfirst = this.newifirst;
-      const BImiddle = this.newimiddle;
-      const BIlast = this.newilast;
-      const BIsuffix = this.newisuffix;
+      const BIfirst = this.capitalizeFirstLetter(this.newifirst);
+      const BImiddle = this.capitalizeFirstLetter(this.newimiddle);
+      const BIlast = this.capitalizeFirstLetter(this.newilast);
+      const BIsuffix = this.capitalizeFirstLetter(this.newisuffix);
       const BIpurok = this.newipurok;
-      const BIcitizenship = this.newicitizenship;
+      const BIcitizenship = this.capitalizeFirstLetter(this.newicitizenship);
       const BIstatus = this.newistatus;
       const BIage = this.newiage;
       const BIquantity = this.newiquantity;
       const BIcedula = this.newicedula;
-      const BIpurpose = this.newipurpose;
+      const BIpurpose =this.capitalizeFirstLetter(this.newipurpose);
       const BIreqstat = "Pending";
 
       const m = this.m;
@@ -1675,17 +1675,17 @@ export default {
       const BCtotalcost = cost + 70 * this.newcquantity;
       const BCdate = this.cdate;
       const BCtime = this.ctime;
-      const BCfirst = this.newcfirst;
-      const BCmiddle = this.newcmiddle;
-      const BClast = this.newclast;
-      const BCsuffix = this.newcsuffix;
+      const BCfirst = this.capitalizeFirstLetter(this.newcfirst);
+      const BCmiddle = this.capitalizeFirstLetter(this.newcmiddle);
+      const BClast = this.capitalizeFirstLetter(this.newclast);
+      const BCsuffix = this.capitalizeFirstLetter(this.newcsuffix);
       const BCpurok = this.newcpurok;
-      const BCcitizenship = this.newccitizenship;
+      const BCcitizenship = this.capitalizeFirstLetter(this.newccitizenship);
       const BCstatus = this.newcstatus;
       const BCage = this.newcage;
       const BCquantity = this.newcquantity;
       const BCcedula = this.newccedula;
-      const BCpurpose = this.newcpurpose;
+      const BCpurpose = this.capitalizeFirstLetter(this.newcpurpose);
       const BCreqstat = "Pending";
 
       const m = this.m;
@@ -1799,16 +1799,16 @@ export default {
 
       const BPdate = this.pdate;
       const BPtime = this.ptime;
-      const BPfirst = this.newpfirst;
-      const BPmiddle = this.newpmiddle;
-      const BPlast = this.newplast;
-      const BPsuffix = this.newpsuffix;
-      const BPbname = this.newpbname;
+      const BPfirst = this.capitalizeFirstLetter(this.newpfirst);
+      const BPmiddle = this.capitalizeFirstLetter(this.newpmiddle);
+      const BPlast = this.capitalizeFirstLetter(this.newplast);
+      const BPsuffix = this.capitalizeFirstLetter(this.newpsuffix);
+      const BPbname = this.capitalizeFirstLetter(this.newpbname);
       const BPvenue = this.newpvenue;
-      const BPnature = this.newpnature;
+      const BPnature = this.capitalizeFirstLetter(this.newpnature);
       const BPeffectivity = this.newpeffectivity;
       const BPcedula = this.newpcedula;
-      const BPpurpose = this.newppurpose;
+      const BPpurpose = this.capitalizeFirstLetter(this.newppurpose);
       const BPtotalcost = cost;
       const BPreqstat = "Pending";
       const BPedate = this.month;
@@ -1868,7 +1868,11 @@ export default {
       this.loadrequests();
     },
 
+     capitalizeFirstLetter(str){
+    const capitalized = str.replace(/(^\w|\s\w)(\S*)/g, (_,m1,m2) => m1.toUpperCase()+m2.toLowerCase())
     
+    return capitalized;
+    }
   },
 };
 </script>

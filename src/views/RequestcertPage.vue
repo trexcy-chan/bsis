@@ -101,6 +101,7 @@
                   :disabledWeekDays="[0]"
                   class="mt-5"
                   :enableTimePicker="false"
+                 
                 ></Datepicker>
               </div>
               <div class="text-left lg:mt-0 mt-10">
@@ -109,10 +110,17 @@
                 <Datepicker
                   v-model="time"
                   timePicker
-                  :is24="false"
                   :minTime="{ hours: 8, minutes: 30 }"
                   :maxTime="{ hours: 16, minutes: 50 }"
-                />
+                  :is24="false"
+                  >
+                  <template #am-pm-button="{ toggle, value }">
+                  <button @click="toggle">{{ value }}</button>
+                  </template>
+                  </Datepicker>
+                  
+                 
+               
 
                 <div class="lg:ml-4 mt-6 text-justify font-semibold">
                   <p class="text-red-500">
@@ -266,7 +274,7 @@
                         >First Name</label
                       >
                       <text
-                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent uppercase"
+                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                         type="text"
                         >{{ first }}</text
                       >
@@ -325,7 +333,7 @@
                       >
                       <input
                         v-model="iccitizenship"
-                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                         type="text"
                         placeholder="Citizenship"
                       />
@@ -354,7 +362,7 @@
                       <input
                         v-model="icage"
                         class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                        type="text"
+                        type="number"
                         placeholder="Age"
                       />
                     </div>
@@ -393,7 +401,7 @@
                       >
                       <input
                         v-model="icpurpose"
-                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                         type="text"
                         placeholder="Purpose"
                       />
@@ -487,7 +495,7 @@
                       >
                       <input
                         v-model="ipbname"
-                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                         type="text"
                         placeholder="Name of Business"
                       />
@@ -501,9 +509,9 @@
                         v-model="ipvenue"
                         class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                       >
-                        <option value="purok1">purok1</option>
-                        <option value="purok2">purok2</option>
-                        <option value="purok3">purok3</option>
+                        <option value="Purok1">Purok 1</option>
+                        <option value="Purok2">Purok 2</option>
+                        <option value="Purok3">Purok 3</option>
                       </select>
                     </div>
                     <div class="grid grid-cols-1 px-3 lg:w-2/5 lg:mb-0  mb-5">
@@ -513,7 +521,7 @@
                       >
                       <input
                         v-model="ipnature"
-                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                         type="text"
                         placeholder="Nature of Business"
                       />
@@ -551,7 +559,7 @@
                       >
                       <input
                         v-model="ippurpose"
-                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                         type="text"
                         placeholder="Purpose"
                       />
@@ -658,7 +666,7 @@
                       >
                       <input
                         v-model="iicitizenship"
-                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                         type="text"
                         placeholder="Citizenship"
                       />
@@ -670,7 +678,7 @@
                       >
                       <select
                         v-model="iistatus"
-                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                       >
                         <option value="Single">Single</option>
                         <option value="Married">Married</option>
@@ -687,7 +695,7 @@
                       <input
                         v-model="iiage"
                         class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                        type="text"
+                        type="number"
                         placeholder="Age"
                       />
                     </div>
@@ -726,7 +734,7 @@
                       >
                       <input
                         v-model="iipurpose"
-                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                         type="text"
                         placeholder="Purpose"
                       />
@@ -831,7 +839,7 @@
                       >
                       <input
                         v-model="ircitizenship"
-                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                         type="text"
                         placeholder="Citizenship"
                       />
@@ -860,7 +868,7 @@
                       <input
                         v-model="irage"
                         class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                        type="text"
+                        type="number"
                         placeholder="Age"
                       />
                     </div>
@@ -899,7 +907,7 @@
                       >
                       <input
                         v-model="irpurpose"
-                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                        class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                         type="text"
                         placeholder="Purpose"
                       />
@@ -1596,7 +1604,7 @@ export default {
           this.BrgyClearance = true;
           this.BrgyPermit = false;
           this.BrgyIndigency = false;
-          this.Residency = false;
+          this.BrgyResidency = false;
         }
       } else if (this.ctype == "BUSINESS PERMIT") {
         const db = getFirestore(app);
@@ -1613,7 +1621,7 @@ export default {
           this.BrgyClearance = false;
           this.BrgyPermit = true;
           this.BrgyIndigency = false;
-          this.Residency = false;
+          this.BrgyResidency = false;
         }
       } else if (this.ctype == "CERTIFICATE OF INDIGENCY") {
         const db = getFirestore(app);
@@ -1630,7 +1638,7 @@ export default {
           this.BrgyClearance = false;
           this.BrgyPermit = false;
           this.BrgyIndigency = true;
-          this.Residency = false;
+          this.BrgyResidency = false;
         }
       } else if (this.ctype == "CERTIFICATE OF RESIDENCY") {
         const db = getFirestore(app);
@@ -1675,12 +1683,15 @@ export default {
         this.icstatus == null ||
         this.icage == null ||
         this.icquantity == null ||
-        this.icedula == null
+        this.icedula == null ||
+        this.icpurpose == null
       ) {
         this.$toast.warning("Parameters cant be empty", {
           position: "top",
         });
       } else if (this.ftype == this.ctype) {
+        this.icpurpose = this.capitalizeFirstLetter(this.icpurpose);
+        this.iccitizenship= this.capitalizeFirstLetter(this.iccitizenship);
         this.clearance = true;
         this.permit = false;
         this.indigency = false;
@@ -1714,12 +1725,15 @@ export default {
         this.iistatus == null ||
         this.iiage == null ||
         this.iiquantity == null ||
-        this.iicedula == null
+        this.iicedula == null ||
+        this.iipurpose == null
       ) {
         this.$toast.warning("Parameters cant be empty", {
           position: "top",
         });
       } else if (this.ftype == this.ctype) {
+        this.iipurpose = this.capitalizeFirstLetter(this.iipurpose);
+        this.iicitizenship= this.capitalizeFirstLetter(this.iicitizenship);
         this.clearance = false;
         this.permit = false;
         this.indigency = true;
@@ -1752,12 +1766,15 @@ export default {
         this.irstatus == null ||
         this.irage == null ||
         this.irquantity == null ||
-        this.ircedula == null
+        this.ircedula == null ||
+        this.irpurpose == null
       ) {
         this.$toast.warning("Parameters cant be empty", {
           position: "top",
         });
       } else if (this.ftype == this.ctype) {
+        this.irpurpose = this.capitalizeFirstLetter(this.irpurpose);
+        this.ircitizenship= this.capitalizeFirstLetter(this.ircitizenship);
         this.clearance = false;
         this.permit = false;
         this.indigency = false;
@@ -1827,6 +1844,9 @@ export default {
           position: "top",
         });
       } else if (this.ftype == this.ctype) {
+        this.ippurpose = this.capitalizeFirstLetter(this.ippurpose);
+        this.ipbname= this.capitalizeFirstLetter(this.ipbname);
+        this.ipnature= this.capitalizeFirstLetter(this.ipnature);
         this.clearance = false;
         this.permit = true;
         this.indigency = false;
@@ -1872,20 +1892,23 @@ export default {
         this.recentdate.getMonth() +
         this.recentdate.getDate() +
         this.recentdate.getFullYear();
+
+      const z = "" + this.calendar;
+
       const time1 = parseInt("" + this.time.hours + this.time.minutes);
       const time2 = parseInt(
         "" + this.calendar.getHours() + this.calendar.getMinutes()
       );
 
-      if (x.includes("Sun")) {
+      if (z.includes("Sun")) {
         this.$toast.warning("No office on Sundays", { position: "top" });
       } else if (
-        x.includes("Jan 01") ||
-        x.includes("Apr 09") ||
-        x.includes("Jun 12") ||
-        x.includes("Nov 30") ||
-        x.includes("Dec 25") ||
-        x.includes("Dec 31")
+        z.includes("Jan 01") ||
+        z.includes("Apr 09") ||
+        z.includes("Jun 12") ||
+        z.includes("Nov 30") ||
+        z.includes("Dec 25") ||
+        z.includes("Dec 31")
       ) {
         this.$toast.warning("No office on Holidays", { position: "top" });
       } else if (x == y && time1 < time2 && time1 >= 830) {
@@ -2298,6 +2321,12 @@ export default {
     closepreview() {
       this.previewdate = false;
     },
+    capitalizeFirstLetter(str){
+    const capitalized = str.replace(/(^\w|\s\w)(\S*)/g, (_,m1,m2) => m1.toUpperCase()+m2.toLowerCase())
+    
+    return capitalized;
+    }
+    
   },
 };
 </script>
