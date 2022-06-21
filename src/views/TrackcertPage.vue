@@ -360,7 +360,7 @@
           </div>
           <div
             v-if="editIndigency"
-            class=" lg:w-1/3 w-2/3 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500"
+            class="lg:w-2/3 w-80 px-10 py-10 rounded-lg border-2 bg-gray-100 border-gray-500 mx-3"
           >
            <div class="flex justify-between">
             <h1 class="text-xl font-semibold text-left">
@@ -382,7 +382,7 @@
                 >
                 <input
                   v-model="newifirst"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="First Name"
                 />
@@ -394,7 +394,7 @@
                 >
                 <input
                   v-model="newimiddle"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="Middle Name"
                 />
@@ -406,7 +406,7 @@
                 >
                 <input
                   v-model="newilast"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="Last Name"
                 />
@@ -418,7 +418,7 @@
                 >
                 <input
                   v-model="newisuffix"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="Suffix"
                 />
@@ -446,7 +446,7 @@
                 >
                 <input
                   v-model="newicitizenship"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="Citizenship"
                 />
@@ -475,7 +475,7 @@
                 <input
                   v-model="newiage"
                   class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                  type="text"
+                  type="number"
                   placeholder="Age"
                 />
               </div>
@@ -514,7 +514,7 @@
                 >
                 <input
                   v-model="newipurpose"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="Purpose"
                 />
@@ -661,7 +661,7 @@
                 >
                 <input
                   v-model="newrfirst"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="First Name"
                 />
@@ -673,7 +673,7 @@
                 >
                 <input
                   v-model="newrmiddle"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="Middle Name"
                 />
@@ -685,7 +685,7 @@
                 >
                 <input
                   v-model="newrlast"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="Last Name"
                 />
@@ -697,7 +697,7 @@
                 >
                 <input
                   v-model="newrsuffix"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="Suffix"
                 />
@@ -725,7 +725,7 @@
                 >
                 <input
                   v-model="newrcitizenship"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="Citizenship"
                 />
@@ -754,7 +754,7 @@
                 <input
                   v-model="newrage"
                   class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                  type="text"
+                  type="number"
                   placeholder="Age"
                 />
               </div>
@@ -793,7 +793,7 @@
                 >
                 <input
                   v-model="newrpurpose"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="Purpose"
                 />
@@ -936,7 +936,7 @@
                 >
                 <input
                   v-model="newpfirst"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="First Name"
                 />
@@ -948,7 +948,7 @@
                 >
                 <input
                   v-model="newpmiddle"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="Middle Name"
                 />
@@ -960,7 +960,7 @@
                 >
                 <input
                   v-model="newplast"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="Last Name"
                 />
@@ -972,7 +972,7 @@
                 >
                 <input
                   v-model="newpsuffix"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="Suffix"
                 />
@@ -986,7 +986,7 @@
                 >
                 <input
                   v-model="newpbname"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="Name of Business"
                 />
@@ -1012,9 +1012,9 @@
                 >
                 <input
                   v-model="newpnature"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
-                  placeholder="Nature of Business"
+                  placeholder="Nature of Business" 
                 />
               </div>
             </div>
@@ -1050,7 +1050,7 @@
                 >
                 <input
                   v-model="newppurpose"
-                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="py-2 px-3 rounded-lg border-2 border-teal-400 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent capitalize"
                   type="text"
                   placeholder="Purpose"
                 />
